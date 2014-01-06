@@ -57,22 +57,27 @@ The range of a more complex text (that runs over more that one DOM node) could l
 {% gist 3209510 example2.js %}
 
 This is a good starting point for describing fragments of text embedded in html. If you want to locate the visual position of this range you can call  
+{% gist 3209510 example3.js %}
 
 
 ### How to save it in the backend
 
 For saving the dataset to the backend we need a string representation of the DOM elements. Different approaches are possible. As XPath it could look something like this:  
+{% gist 3209510 example4.js %}
   
 Or, if you don&#8217;t want to rely on elements to have id&#8217;s or classes:
+{% gist 3209510 example5.js %}
 
   
 Yap, in Xpath the index starts with 1. 
 
 However, for Nimbi and PaperC we tried to keep the data smaller (it&#8217;s potentially big data, right?) and query language agnostic:  
+{% gist 3209510 example6.js %}
   
 startContainer and endContainer are the first textnode in the frist childNode of body (i.e. body.childNodes[0].childNodes[0]). The dataset is smaller (less to send over the wire and to save in the db) and &#8211; more importantly &#8211; it does not rely on XPath. While XPath might not be the bottleneck in this kind of application, it is known for not necessarily being fast, especially on mobile devices. And there is no XPath on Android < 2.4.
 
 Here is an example of a more complex DOM tree:  
+{% gist 3209510 example7.js %}
   
 This pretty much solved the position issue for us.
 

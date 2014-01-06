@@ -31,6 +31,8 @@ It wasn&#8217;t the sluggishness and weak performance of <a href="http://cubiq.o
 <a href="http://aronwoost.github.com/optimize-webkit-overflow-scrolling/1.html" target="_blank">Check example 1</a> (with iOS5+ device or simulator)
 
 The magic happens with <a href="https://github.com/aronwoost/optimize-webkit-overflow-scrolling/blob/gh-pages/1.html#L23" target="_blank">this line</a>.  
+{% gist 2887542 %}
+
 Without you would still have a touchmove scroll with one finger, however the &#8220;native&#8221; bounce comes with -webkit-overflow-scrolling:touch. I notices however one thing that differs from the native scroll. When the content to scroll is on top (e.g. you can&#8217;t scroll any further up) and try it anyways, the touchmove bubbles up. <a href="http://aronwoost.github.com/optimize-webkit-overflow-scrolling/1.html" target="_blank">Try example 1 again</a> (with iOS5+ device or simulator) In this case it bubble to the top window object which then will scroll the browser chrome. While this might be an expected behavior, it still feels not very native. Let&#8217;s fix this. 
 
 ### Make it even more native
@@ -40,11 +42,13 @@ Without you would still have a touchmove scroll with one finger, however the &#8
 When you try the same here, you&#8217;ll notice that you can drag the scrolled content with the expected physics. This feels, well, simply amazing. I have been working with all the JavaScript scroll implementations for such a long time now and now it&#8217;s finally native. Yeah! 
 
 So how is it done?  
+{% gist 2887552 %}
   
 Well, the magic is to include the scroll content <a href="https://github.com/aronwoost/optimize-webkit-overflow-scrolling/blob/gh-pages/2.html#L57" target="_blank">into another container div</a>, that has to have the <a href="https://github.com/aronwoost/optimize-webkit-overflow-scrolling/blob/gh-pages/2.html#L26" target="_blank">same height as the parent scroll container and also the correct overflow settings set</a> (-webkit-overflow-scrolling doesn&#8217;t seem to be needed). Note that the subcontainer has to have the exact same height, so no margin or padding or stuff allowed. Also note, that no JavaScript is required. This is pure css.
 
 #### Here a video to illustrate the difference between example 1 and 2:
 
+<iframe src="http://www.youtube.com/embed/Yjch40sp4Po" frameborder="0" width="420" height="315"></iframe>
 
 
 ### One last thing
@@ -54,6 +58,7 @@ Notice that in the previous example you can still scroll the browser chrome? Try
 <a href="http://aronwoost.github.com/optimize-webkit-overflow-scrolling/3.html" target="_blank">Check example 3</a> (with iOS5+ device or simulator)
 
 Easy.  
+{% gist 2887578 %}
   
 <a href="https://github.com/aronwoost/optimize-webkit-overflow-scrolling/blob/gh-pages/3.html#L40" target="_blank">Listen to the touchmove event on document level and prevent the default behavior</a>. With this setting alone scrolling would be disabled globally, also in the overflow div. That why you need to set <a href="https://github.com/aronwoost/optimize-webkit-overflow-scrolling/blob/gh-pages/3.html#L57" target="_blank">another touchmove listener to the scroll div</a> and stop the bubbling. This event then will never reach the document object.
 

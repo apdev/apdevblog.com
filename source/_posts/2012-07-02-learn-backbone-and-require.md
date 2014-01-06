@@ -19,7 +19,7 @@ So you wanna join the little HTML5 party some of us are having? Great! It&#8217;
 
 <!--more-->
 
-* **Dear JavaScript pros**: This is a blog post for beginners. So don&#8217;t shoot me for simplifying things. *
+**Dear JavaScript pros**: This is a blog post for beginners. So don&#8217;t shoot me for simplifying things.
 
 Many developers (especially from the Flash / ActionScript community, but not only them) are currently wanting to &#8220;learn&#8221; HTML5. Some want to focus on websites, others want to build (single-page-) apps. Some want to do shiny advertising&#8217;ish projects, others want to focus more on &#8220;products&#8221;. And many say, that therefore they need to learn jQuery now.
 
