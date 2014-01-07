@@ -10,9 +10,9 @@ find public -iname '*.gz' -exec bash -c 'mv $0 ${0/.gz/}' {} \;
 echo "gzipping successful"
 
 echo "syncing gzipped files"
-s3cmd sync --progress --acl-public --reduced-redundancy --cf-invalidate --add-header 'Content-Encoding:gzip' public/* s3://$1/ --exclude '*.*' --include '*.html' --include '*.js' --include '*.css'
+s3cmd sync --progress --acl-public --reduced-redundancy --cf-invalidate --verbose --add-header 'Content-Encoding:gzip' public/* s3://$1/ --exclude '*.*' --include '*.html' --include '*.js' --include '*.css'
 echo "syncing gzipped files complete"
 
 echo "syncing non-gzipped files"
-s3cmd sync --progress --acl-public --reduced-redundancy --cf-invalidate public/* s3://$1/ --exclude '*.html' --exclude '*.js' --exclude '*.css'
+s3cmd sync --progress --acl-public --reduced-redundancy --cf-invalidate --verbose public/* s3://$1/ --exclude '*.html' --exclude '*.js' --exclude '*.css'
 echo "syncing non-gzipped files complete"
