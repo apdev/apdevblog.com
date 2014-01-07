@@ -75,6 +75,11 @@ article {
       font-size: .85em;
       clear: both;
       overflow: hidden;
+      .twitter-follow-button {
+        position: relative;
+        top: 5px;
+        margin-left: 7px;
+      }
     }
     .byline + time:before, time +time:before, .comments:before, .byline ~ .categories:before {
       @extend .separator;
