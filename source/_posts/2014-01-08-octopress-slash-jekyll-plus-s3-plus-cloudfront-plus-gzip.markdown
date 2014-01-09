@@ -27,4 +27,4 @@ One open thing was to enable gzipped content. Zipping is certainly the most obvi
 
 I made some modifications regarding CloudFront. Also ```rename``` is not available on OSX so I changed it around a bit.
 
-{% gist 8298023 gziped_sync.sh %}
+{% gist 8298023 gziped_sync.sh aronwoost %}

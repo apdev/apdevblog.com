@@ -21,32 +21,40 @@ module Jekyll
     end
 
     def render(context)
-      if parts = @text.match(/([a-zA-Z\d]*) (.*)/)
-        gist, file = parts[1].strip, parts[2].strip
+      if parts = @text.match(/([a-zA-Z\d]*) (\S*)(.*)/)
+        gist, file, username = parts[1].strip, parts[2].strip, parts[3].strip
       else
-        gist, file = @text.strip, ""
+        gist, file, username = @text.strip, "", ""
       end
       if gist.empty?
         ""
       else
-        script_url = script_url_for gist, file
+        gist_anchor = gist_anchor_for gist, file, username
         code       = get_cached_gist(gist, file) || get_gist_from_web(gist, file)
-        html_output_for script_url, code
+        html_output_for gist_anchor, code
       end
     end
 
-    def html_output_for(script_url, code)
+    def html_output_for(anchor, code)
       code = CGI.escapeHTML code
       <<-HTML
-<div><script src='#{script_url}'></script>
+<div>#{anchor}</code>
 <noscript><pre><code>#{code}</code></pre></noscript></div>
       HTML
     end
 
-    def script_url_for(gist_id, filename)
-      url = "https://gist.github.com/#{gist_id}.js"
-      url = "#{url}?file=#{filename}" unless filename.nil? or filename.empty?
-      url
+    def gist_anchor_for(gist_id, filename, username)
+      url = "https://gist.github.com/"
+      url = "#{url}#{username}/" unless username.nil? or username.empty?
+      url = "#{url}#{gist_id}"
+
+      a_url = "#{url}"
+      a_url = "#{a_url}##{filename}" unless filename.nil? or filename.empty?
+
+      json_url = "#{url}.json"
+
+      a = "<a href='#{a_url}' target='_blank' data-json-url='#{json_url}' data-file='#{filename}'>View code on gist.github.com</a>"
+      a
     end
 
     def get_gist_url_for(gist, file)
