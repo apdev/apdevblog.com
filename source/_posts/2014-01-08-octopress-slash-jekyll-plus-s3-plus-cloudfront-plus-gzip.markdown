@@ -4,6 +4,7 @@ title: "Octopress/Jekyll + S3 + CloudFront + gzip"
 date: 2014-01-08 11:12:29 +0100
 author: Aron
 comments: true
+permalink: /octopress-jekyll-s3-cloudfront-gzip
 categories:
   - Octopress
   - hosting
