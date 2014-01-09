@@ -143,3 +143,10 @@ article + article {
     }
   }
 }
+
+.fb-share-button {
+  vertical-align: top;
+  > span {
+    vertical-align: top !important;
+  }
+}
