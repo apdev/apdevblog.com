@@ -1,9 +1,7 @@
 ---
 title: Philipp Kyeck
-author: admin
 layout: page
-syntaxhighlighter_encoded:
-  - 1
+sharing: false
 ---
 After studying computer science Philipp Kyeck started working as a Flash developer and technical project manager for argonautenG2 in Berlin. In 2006 he started his freelance career developing Flash and Flex application for agencies as well as clients directly.
 

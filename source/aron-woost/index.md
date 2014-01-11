@@ -1,9 +1,7 @@
 ---
 title: Aron Woost
-author: admin
 layout: page
-syntaxhighlighter_encoded:
-  - 1
+sharing: false
 ---
 <p>Aron Woost has been working in the online industry since 1999 starting his career in Hamburg as a Media Developer for print and digital. He there specialized in the development of advanced Flash web applications. After moving to Berlin he works as a freelance Flash and Flex developer for various agencies as well as for clients directly.</p>
 <p>He creates applications in Flash and Flex for websites, AIR applications or online games.</p>
