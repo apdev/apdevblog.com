@@ -24,4 +24,16 @@ and we have to say 'thank you' to a bunch of
 [to](https://twitter.com/guypod)
 [bother](https://twitter.com/aerotwist)
 [us](https://twitter.com/jonathanklein)
-with this.
+with these things.
+
+So we developer care about:
+
+- gzipping
+- minify/uglify + concat HTML, JS and CSS
+- all blocking JS at the bottom of the page
+- caching
+- fewer requests
+- and a lot more ...
+
+Each of the points above will improve your site's performance - sometimes more
+sometimes less, depending - of course - on your site and its structure.
