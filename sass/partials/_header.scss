@@ -1,18 +1,27 @@
-body > header {
-  background: $header-bg;
+.apdev--main-header {
+  padding: 2em 0 3em;
+
+  @media only screen and (min-width: 768px) {
+    padding-bottom: 6em;
+  }
+  
   h1 {
     display: inline-block;
     margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+
     a, a:visited, a:hover {
-      color: $title_color;
+      color: #252525;
       text-decoration: none;
     }
   }
+
   h2 {
-    margin: .2em 0 0;
-    @extend .sans;
+    margin: -0.25em 0 0;
     font-size: 1em;
-    color: $subtitle-color;
     font-weight: normal;
+    font-family: Arial, sans-serif;
   }
 }
