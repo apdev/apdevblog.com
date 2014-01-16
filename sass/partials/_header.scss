@@ -1,12 +1,12 @@
 .apdev--main-header {
   padding: 2em 0 3em;
+  margin-left: -4px;
 
   @media only screen and (min-width: 768px) {
     padding-bottom: 6em;
   }
   
   h1 {
-    display: inline-block;
     margin: 0;
     font-size: 1em;
     font-weight: bold;
@@ -23,5 +23,14 @@
     font-size: 1em;
     font-weight: normal;
     font-family: Arial, sans-serif;
+
+    span {
+      padding-bottom: 2px;
+    }
+  }
+
+  span {
+    background-color: #F8F8F8;
+    padding: 0 4px;
   }
 }

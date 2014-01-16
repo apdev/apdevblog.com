@@ -18,7 +18,15 @@ $sidebar-width-wide: 300px !default;
 
 body {
   -webkit-text-size-adjust: none;
-  background-color: #F8F8F8;
+  
+  background: #F8F8F8;
+  @media only screen and (min-width: 768px) {
+    background: #F8F8F8 url(/images/apdev-bg.gif) no-repeat center -150px;
+  }
+  @media only screen and (min-width: 992px) {
+    background-position: center -90px;
+  }
+
 
   div.pagination {
     @extend .group;
