@@ -1,16 +1,22 @@
 .apdev--main-header {
-  padding: 2em 0 3em;
+  padding: 1em 0 2em;
   margin-left: -4px;
 
   @media only screen and (min-width: 768px) {
     padding-bottom: 6em;
+    padding: 2em 0 3em;
   }
   
   h1 {
+    display: inline-block;
     margin: 0;
     font-size: 1em;
     font-weight: bold;
     font-family: Arial, sans-serif;
+
+    @media only screen and (min-width: 768px) {
+      display: block;
+    }
 
     a, a:visited, a:hover {
       color: #252525;
@@ -19,10 +25,15 @@
   }
 
   h2 {
+    display: inline-block;
     margin: -0.25em 0 0;
     font-size: 1em;
     font-weight: normal;
     font-family: Arial, sans-serif;
+    
+    @media only screen and (min-width: 768px) {
+      display: block;
+    }
 
     span {
       padding-bottom: 2px;
