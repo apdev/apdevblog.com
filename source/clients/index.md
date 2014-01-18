@@ -14,7 +14,3 @@ sharing: false
 
 <div style="clear:left">
 </div>
-
-<div class="tweetmeme_button" style="float: left; margin-right: 10px; margin-bottom: 10px;">
-  <a class="tm_button" rel="&style=normal&b=2" href="/clients/"></a>
-</div>

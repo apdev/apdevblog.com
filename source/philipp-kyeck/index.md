@@ -13,8 +13,6 @@ Contact Philipp: phil at apdevblog dot com
 
 or visit my portfolio at: [www.beta-interactive.de][1]
 
-<a href="http://linkedin.com/in/philippkyeck" target="_blank"><img src="/images/img/linkedin_btn.jpg" /></a><a href="http://twitter.com/pkyeck" target="_blank"><img src="/images/img/twitter_btn.jpg" /></a><a href="https://www.xing.com/profile/Philipp_Kyeck" target="_blank"><img src="/images/img/xing_btn.jpg" /></a><a href="http://www.facebook.com/philipp.kyeck" target="_blank"><img src="/images/img/facebook_btn.jpg" /></a> <div class="tweetmeme_button" style="float: left; margin-right: 10px; margin-bottom: 10px;">
-  <a class="tm_button" rel="&style=normal&b=2" href="/philipp-kyeck/"></a>
-</div>
+<a href="http://linkedin.com/in/philippkyeck" target="_blank"><img src="/images/img/linkedin_btn.jpg" /></a><a href="http://twitter.com/pkyeck" target="_blank"><img src="/images/img/twitter_btn.jpg" /></a><a href="https://www.xing.com/profile/Philipp_Kyeck" target="_blank"><img src="/images/img/xing_btn.jpg" /></a><a href="http://www.facebook.com/philipp.kyeck" target="_blank"><img src="/images/img/facebook_btn.jpg" /></a>
 
  [1]: http://beta-interactive.de
