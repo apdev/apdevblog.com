@@ -22,4 +22,4 @@ After 10 minutes I caught myself touching and punching on the display with peopl
 
 
 
- [1]: http://apdevblog.com/wp-admin/www.ifa-berlin.de
+ [1]: /wp-admin/www.ifa-berlin.de

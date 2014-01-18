@@ -33,6 +33,6 @@ Not that big of a deal.
 PS: Point taken on the [general critic on closed platforms][4]. 
 
  [1]: http://blogs.adobe.com/flashplatform/2010/01/apples_ipad_--_a_broken_link.html
- [2]: http://apdevblog.com/future-of-flash/
+ [2]: /future-of-flash/
  [3]: http://blog.digitalbackcountry.com/2009/11/html5-cant-exist-without-the-flash-platform/
  [4]: http://www.mikechambers.com/blog/2010/01/28/some-personal-thoughts-on-apple-and-the-trend-towards-closed-platforms/

@@ -25,10 +25,10 @@ We fixed/added some features some of you requested, like e.g.
 *   VideoPlayer now fires events when the video&#8217;s play-state changes
 *   and some other minor changes&#8230;
 
-VideoPlayer example: <a href="http://apdevblog.com/examples/apdev_videoplayer/" target="_blank">http://apdevblog.com/examples/apdev_videoplayer/</a>  
-HTML-embed example: <a href="http://apdevblog.com/examples/apdev_videoplayer/html.html" target="_blank">http://apdevblog.com/examples/apdev_videoplayer/html.html</a>
+VideoPlayer example: <a href="/examples/apdev_videoplayer/" target="_blank">/examples/apdev_videoplayer/</a>  
+HTML-embed example: <a href="/examples/apdev_videoplayer/html.html" target="_blank">/examples/apdev_videoplayer/html.html</a>
 
-We also updated the <a href="http://apdevblog.com/examples/apdev_videoplayer/docs/" target="_blank">documentation</a>.
+We also updated the <a href="/examples/apdev_videoplayer/docs/" target="_blank">documentation</a>.
 
 So go and check it out: <a href="http://code.google.com/p/apdev-videoplayer/" target="_blank">http://code.google.com/p/apdev-videoplayer/</a>.  
 Or just download the new version directly: [apdev-videoplayer-1.0.1][1] 

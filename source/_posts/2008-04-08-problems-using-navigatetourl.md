@@ -154,7 +154,7 @@ swfobject.embedSWF(movie, replaceDiv, width, height, flashVersion,
                express, flashvars, params, attributes);
 </pre>
 
-Here is also a working example: <a title="navigateToUrl example" href="http://apdevblog.com/examples/navigatetourl/" target="_blank">navigateToURL example</a>.  
-And you can download the <a title="download example" href="http://apdevblog.com/examples/navigatetourl/navigatetourl.zip" target="_self">sourcecode</a>.
+Here is also a working example: <a title="navigateToUrl example" href="/examples/navigatetourl/" target="_blank">navigateToURL example</a>.  
+And you can download the <a title="download example" href="/examples/navigatetourl/navigatetourl.zip" target="_self">sourcecode</a>.
 
 cheers 

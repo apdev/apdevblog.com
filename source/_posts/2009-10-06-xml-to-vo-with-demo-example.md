@@ -150,5 +150,5 @@ Did you ever work with the XMLDecoder? Do you think, that this might improve you
  [5]: http://blog.misprintt.net/
  [6]: http://blog.misprintt.net/?p=181
  [7]: http://blog.misprintt.net/?p=192
- [8]: http://apdevblog.com/examples/xml-to-vo/FieldVo.as
- [9]: http://apdevblog.com/examples/xml-to-vo/GroupVo.as
+ [8]: /examples/xml-to-vo/FieldVo.as
+ [9]: /examples/xml-to-vo/GroupVo.as

@@ -28,5 +28,5 @@ The usual customer otherwise might have the feeling the iPhone &#8220;doesn&#821
 PS: Personally, I haven&#8217;t worked on apps that make extensive use of the file system. If you have, feel free to share your experiences. 
 
  [1]: http://farm1.static.flickr.com/36/84970969_68529bd4f1.jpg
- [2]: http://apdevblog.com/slow-itunes-sync-backup/
- [3]: http://apdevblog.com/slow-itunes-sync-backup/#comments
+ [2]: /slow-itunes-sync-backup/
+ [3]: /slow-itunes-sync-backup/#comments

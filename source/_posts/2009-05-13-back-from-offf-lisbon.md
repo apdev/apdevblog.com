@@ -23,7 +23,7 @@ Like always on conferences there are ups and downs. Besides the obvious facts li
 
 <!--more-->
 
-However, for me this year OFFF was great! After the more concrete <a href="http://ffk09.flashforum.de/" target="_blank">flashforum konferenz</a> <a href="http://apdevblog.com/ffk09-one-down-two-more-to-come/" target="_blank">one week earlier</a> the OFFF was just inspiring and looking beyond. Here some highlights for me (Note that I had to skip the third day so it is only about the first two days):
+However, for me this year OFFF was great! After the more concrete <a href="http://ffk09.flashforum.de/" target="_blank">flashforum konferenz</a> <a href="/ffk09-one-down-two-more-to-come/" target="_blank">one week earlier</a> the OFFF was just inspiring and looking beyond. Here some highlights for me (Note that I had to skip the third day so it is only about the first two days):
 
 <a style="font-size:13px; font-weight:bold" href="http://www.presstube.com/"  target="_blank">James Paterson &#038; Amit Pitaru</a>  
 For me this session made the conference! You HAVE TO check out <a href="http://www.pitaru.com/" target="_blank">this sound tool</a>. You can even play the <a href="http://pitaru.com/sonicWireSculptor/online/fast/index.html" target="_blank">low-fi version online</a>. Maybe something for the <a href="http://www.hobnox.com/index.1056.de.html" target="_blank">hobnox Audiotool</a> guys. :) That&#8217;s the reason I visit these conferences. Seeing things I wasn&#8217;t even dreaming of. Also the <a href="http://www.presstube.com/project.php?id=259" target="_blank">weird online world</a> between Monty Python and Yellow Submarine James did, I love it.

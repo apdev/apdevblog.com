@@ -40,7 +40,7 @@ So here we go:
   
   <tr>
     <td>
-      &#8220;Organize imports&#8221; inserts the import statements sometimes below the sourcecode (or somewhere else at the wrong position). When pressing control-o the second time the imports are most of the time organized correctly. This especially happens when working with external core libarys like the <a href="http://apdevblog.com/update-using-flvideo-package-w-eclipse-and-fdt3/" target="_blank">fl-core</a>. Not 100% reproducible.
+      &#8220;Organize imports&#8221; inserts the import statements sometimes below the sourcecode (or somewhere else at the wrong position). When pressing control-o the second time the imports are most of the time organized correctly. This especially happens when working with external core libarys like the <a href="/update-using-flvideo-package-w-eclipse-and-fdt3/" target="_blank">fl-core</a>. Not 100% reproducible.
     </td>
     
     <td align="center">
@@ -176,5 +176,5 @@ If you have any suggestions (or find mistakes in the list) please leave a commen
 For FDT support please contact the <a href="http://fdt.powerflasher.com/products/fdt-3/support/" target="_blank">FDT support team</a> or leave a thread in to <a href="http://fdt.powerflasher.com/forum/" target="_blank">FDT forums</a>. 
 
  [1]: http://bugs.powerflasher.com/
- [2]: http://apdevblog.com/fdt-buglist-they-heard-us/
+ [2]: /fdt-buglist-they-heard-us/
  [3]: http://www.flashdevelop.org/community/

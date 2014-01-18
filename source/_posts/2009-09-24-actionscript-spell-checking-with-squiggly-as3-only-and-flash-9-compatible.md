@@ -31,7 +31,7 @@ Try it for yourself &#8230;
 
 <!--more-->
 
-<a href="http://apdevblog.com/examples/apdev_squiggly/" target="_blank"><img class="alignnone" title="apdev Squiggly Example" src="http://apdevblog.com/examples/apdev_squiggly/apdev_squiggly.gif" alt="" width="503" height="302" /></a>
+<a href="/examples/apdev_squiggly/" target="_blank"><img class="alignnone" title="apdev Squiggly Example" src="/examples/apdev_squiggly/apdev_squiggly.gif" alt="" width="503" height="302" /></a>
 
 It is as easy as this:
 
@@ -48,8 +48,8 @@ var url:String = "data/usa.zwl";
 var checker:ApdevSpellChecker = new ApdevSpellChecker(txt, url);
 </pre>
 
-You can grab version 0.1 of our ApdevSpellChecker class here: <a href="http://apdevblog.com/examples/apdev_squiggly/src/ApdevSpellChecker.as" target="_blank">ApdevSpellChecker.as</a>  
-&#8230; and check the example here: <a href="http://apdevblog.com/examples/apdev_squiggly/" target="_blank">http://apdevblog.com/examples/apdev_squiggly/</a>  
+You can grab version 0.1 of our ApdevSpellChecker class here: <a href="/examples/apdev_squiggly/src/ApdevSpellChecker.as" target="_blank">ApdevSpellChecker.as</a>  
+&#8230; and check the example here: <a href="/examples/apdev_squiggly/" target="_blank">/examples/apdev_squiggly/</a>  
 More info about Squiggly here: <a href="http://labs.adobe.com/technologies/squiggly/" target="_blank">http://labs.adobe.com/technologies/squiggly/</a>
 
 cheers 

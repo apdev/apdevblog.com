@@ -20,7 +20,7 @@ tags:
 <img class=" " title="FOTB 09 Beach Barbecue by Keith Peters" src="http://farm3.static.flickr.com/2647/3953793250_cbf271dcd5.jpg" alt="" width="500" height="281" />  
 <a style="font-size:10px" href="http://www.flickr.com/photos/bit-101/3953793250/" target="_blank">FOTB 09 Beach Barbecue &#8211; Image by Keith Peters via Flickr</a>
 
-Second time (after <a href="http://apdevblog.com/back-from-brighton/" target="_blank">2007</a>) for us being at <a href="http://www.flashonthebeach.com/" target="_blank">FOTB</a> in Brighton this year &#8230; and I just wanted to write a small roundup to let all of you who couldn&#8217;t be there in person know what you missed out on ;)
+Second time (after <a href="/back-from-brighton/" target="_blank">2007</a>) for us being at <a href="http://www.flashonthebeach.com/" target="_blank">FOTB</a> in Brighton this year &#8230; and I just wanted to write a small roundup to let all of you who couldn&#8217;t be there in person know what you missed out on ;)
 
 All in all it was great &#8211; again! Not so much about Flash and ActionScript but nonetheless there were definitely some speakers that totally blew my mind.
 

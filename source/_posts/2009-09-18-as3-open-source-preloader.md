@@ -24,6 +24,6 @@ Key features:
 - Some nice enhancements
 
 <a href="http://code.google.com/p/as3-preloader-queue/" target="_blank">Download here</a>  
-<a href="http://apdevblog.com/examples/apdev_preloader/docs/" target="_blank">Find documentation</a>  
+<a href="/examples/apdev_preloader/docs/" target="_blank">Find documentation</a>  
 <a href="http://code.google.com/p/as3-preloader-queue/wiki/TypicalScenario" target="_blank">See a typical scenario</a>  
 <a href="http://code.google.com/p/as3-preloader-queue/wiki/DifferenceToLoader" target="_blank">Differences to Loader</a> 

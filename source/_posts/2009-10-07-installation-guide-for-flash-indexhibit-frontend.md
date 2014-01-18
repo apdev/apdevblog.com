@@ -22,26 +22,26 @@ tags:
   - swffit
   - swfobject
 ---
-Because some of you asked for an installation guide for the <a href="http://apdevblog.com/flash-frontend-for-indexhibit-cms/" target="_blank">example</a> I posted earlier &#8211; here comes a small how-to so that you can get the demo up and running on your own computer/webserver.
+Because some of you asked for an installation guide for the <a href="/flash-frontend-for-indexhibit-cms/" target="_blank">example</a> I posted earlier &#8211; here comes a small how-to so that you can get the demo up and running on your own computer/webserver.
 
 There is more than one way to get this done &#8230;
 
 <!--more-->
 
-1) you can focus on the visual part (flash) and just use our <a href="http://indexhibit.org" target="_blank">Indexhibit</a> installation / <a href="http://apdevblog.com/indexhibit/amf/gateway.php" target="_blank">remoting gateway</a> to get the data into your flash-page
+1) you can focus on the visual part (flash) and just use our <a href="http://indexhibit.org" target="_blank">Indexhibit</a> installation / <a href="/indexhibit/amf/gateway.php" target="_blank">remoting gateway</a> to get the data into your flash-page
 
 or
 
 2) you want to install everything on your own computer/webserver and create your own flash/indexhibit page.
 
-for 1) just download the <a href="http://apdevblog.com/sources-for-flash-frontend-for-indexhibit-cms/" target="_blank">sources</a> and take a look at the frontend-classes within the *com.apdevblog.examples.indexhibit.view* package. play with them and change the things you need to alter the look of the entire page. don&#8217;t modify the amf-server url and you&#8217;ll get our dummy-posts to be displayed in your page (for testing purposes).
+for 1) just download the <a href="/sources-for-flash-frontend-for-indexhibit-cms/" target="_blank">sources</a> and take a look at the frontend-classes within the *com.apdevblog.examples.indexhibit.view* package. play with them and change the things you need to alter the look of the entire page. don&#8217;t modify the amf-server url and you&#8217;ll get our dummy-posts to be displayed in your page (for testing purposes).
 
 for the rest of you (2) &#8230; here is the short installation guide.
 
 *   requirements: webserver running php (>=4) and mysql
 *   <a href="http://indexhibit.org/install/" target="_blank">install Indexhibit</a> in a subdirectory of your webserver (e.g. /ndxz)
 *   copy the &#8220;amf&#8221; folder to the root-directory of your webserver (this is the installation of amfphp)
-*   then make sure you can access the remote gateway of your amfphp installation by opening the URL in your browser (sth. like http://localhost/amf/gateway.php) &#8211; it should look like our <a href="http://apdevblog.com/indexhibit/amf/gateway.php" target="_blank">gateway</a>.
+*   then make sure you can access the remote gateway of your amfphp installation by opening the URL in your browser (sth. like http://localhost/amf/gateway.php) &#8211; it should look like our <a href="/indexhibit/amf/gateway.php" target="_blank">gateway</a>.
 *   change the values in /amf/includes/dbaccess.php to fit your mysql-user and DB
 *   also, you need to change the *SERVER_URL* inside of the Constants-AS3-class (*com.apdevblog.examples.indexhibit.model.Constants*)
 *   now you should be able to compile* the swf and grab the data from your server

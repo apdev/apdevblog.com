@@ -31,4 +31,4 @@ whole thing is based on: <a href="http://indexhibit.org/" target="_blank">indexh
 cheers + and of course a merry christmas  
 phil 
 
- [1]: http://apdevblog.com/flash-frontend-for-indexhibit-cms/
+ [1]: /flash-frontend-for-indexhibit-cms/

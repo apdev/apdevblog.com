@@ -15,11 +15,11 @@ tags:
   - Flex
   - ItemRenderer
 ---
-Hi there &#8230; some weeks ago I blogged about my struggles with Flex and its built-in DataGrid. After some time of getting to know &#8220;my Grid&#8221;, I decided to refactor the <a href="http://apdevblog.com/flex-datagrid-impressions-of-a-flex-noob/" target="_blank">previous example</a>.
+Hi there &#8230; some weeks ago I blogged about my struggles with Flex and its built-in DataGrid. After some time of getting to know &#8220;my Grid&#8221;, I decided to refactor the <a href="/flex-datagrid-impressions-of-a-flex-noob/" target="_blank">previous example</a>.
 
 <!--more-->
 
-To begin with here&#8217;s the new demo &#8230; (<a href="http://apdevblog.com/examples/apdev_datagrid2/srcview/" target="_blank">sourceview</a>)  
+To begin with here&#8217;s the new demo &#8230; (<a href="/examples/apdev_datagrid2/srcview/" target="_blank">sourceview</a>)  
 <div id="swfd5513">
   This movie requires Flash Player 9
 </div>

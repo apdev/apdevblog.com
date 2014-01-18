@@ -21,10 +21,10 @@ tags:
   - swffit
   - swfobject
 ---
-This is just a small update to the sources of our <a href="http://apdevblog.com/flash-frontend-for-indexhibit-cms/" target="_blank">Flash / Indexhibit example</a> we posted earlier.  
+This is just a small update to the sources of our <a href="/flash-frontend-for-indexhibit-cms/" target="_blank">Flash / Indexhibit example</a> we posted earlier.  
 I added a FLA file for all of you that never used the Flex-compiler before :)
 
-Just <a href="http://apdevblog.com/sources-for-flash-frontend-for-indexhibit-cms/" target="_blank">download the sources</a> and open the ndxz.fla in (at least) Flash CS3. Hit cmd-return and enjoy.
+Just <a href="/sources-for-flash-frontend-for-indexhibit-cms/" target="_blank">download the sources</a> and open the ndxz.fla in (at least) Flash CS3. Hit cmd-return and enjoy.
 
 <img src="/images/2009/10/ndxz_sub.jpg" alt="ndxz_sub" title="ndxz_sub" width="500" height="344" class="alignnone size-full wp-image-652" />
 

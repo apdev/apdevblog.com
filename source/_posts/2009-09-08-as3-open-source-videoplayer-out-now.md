@@ -19,7 +19,7 @@ tags:
 ---
 We&#8217;re proud to announce our first open source project: the <a href="http://code.google.com/p/apdev-videoplayer/" target="_blank">Apdev Videoplayer</a>.
 
-<a href="http://apdevblog.com/examples/apdev_videoplayer/" target="_blank"><img class="alignnone size-full wp-image-436" title="Apdev videoplayer" src="/images/2009/09/screenshot.jpg" alt="Apdev videoplayer" width="349" height="290" /></a>
+<a href="/examples/apdev_videoplayer/" target="_blank"><img class="alignnone size-full wp-image-436" title="Apdev videoplayer" src="/images/2009/09/screenshot.jpg" alt="Apdev videoplayer" width="349" height="290" /></a>
 
 It&#8217;s an ActionScript 3.0 script-only videoplayer that we&#8217;re releasing under the MIT license. So you can do with it whatever you want &#8211; change it, skin it or just tear it apart and use some snippets of our code. It&#8217;s up to you.
 
@@ -39,9 +39,9 @@ Some of our player&#8217;s features are:
 
 And compared to Adobe&#8217;s FLVPlayback component our videoplayer super-small in size (11.5K to around 70-80K).
 
-To better understand the videoplayer itself or how it is built, just take a look at the <a href="http://apdevblog.com/examples/apdev_videoplayer/docs/" target="_blank">documentaion</a>.
+To better understand the videoplayer itself or how it is built, just take a look at the <a href="/examples/apdev_videoplayer/docs/" target="_blank">documentaion</a>.
 
-There is also a wrapper class for a player that can easily be embedded into html &#8211; <a href="http://apdevblog.com/examples/apdev_videoplayer/html.html" target="_blank">embed example</a>.
+There is also a wrapper class for a player that can easily be embedded into html &#8211; <a href="/examples/apdev_videoplayer/html.html" target="_blank">embed example</a>.
 
 If you have any questions or even suggestions, don&#8217;t hesitate and contact us.
 

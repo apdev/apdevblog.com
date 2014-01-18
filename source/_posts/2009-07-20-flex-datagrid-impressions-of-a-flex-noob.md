@@ -36,7 +36,7 @@ Here are the requirements I had to fulfill for one of my own DataGrids:
 *   use ComboBox within DataGrid as ItemRenderer
 *   ComboBox should define a time-interval for the money-values
 
-So this is what I came up with &#8211; you can see for yourself. (<a href="http://apdevblog.com/examples/apdev_datagrid/srcview/" target="_blank">sourceview</a> / <del datetime="2009-07-20T16:02:05+00:00">rightclick</del>)  
+So this is what I came up with &#8211; you can see for yourself. (<a href="/examples/apdev_datagrid/srcview/" target="_blank">sourceview</a> / <del datetime="2009-07-20T16:02:05+00:00">rightclick</del>)  
 <div id="swfd5512">
   This movie requires Flash Player 9
 </div>

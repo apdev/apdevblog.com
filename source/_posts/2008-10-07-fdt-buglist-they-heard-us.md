@@ -17,6 +17,6 @@ Great news from our favorite ActionScript Editor [FDT][1]. After we post the [Un
 Thanks FDT Team. We are looking forward to the future of the best ActionScript editor on earth. 
 
  [1]: http://fdt.powerflasher.com/
- [2]: http://apdevblog.com/unofficial-fdt-buglist/
+ [2]: /unofficial-fdt-buglist/
  [3]: http://fdt.powerflasher.com/blog/?p=90
  [4]: http://fdt.powerflasher.com/blog/?p=107

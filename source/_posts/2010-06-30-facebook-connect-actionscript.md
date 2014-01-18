@@ -15,13 +15,13 @@ tags:
   - Flash
   - JavaScript
 ---
-<a href="http://apdevblog.com/examples/fbconnect/" target="_blank"><img class="alignnone size-full wp-image-897" title="apdev_imageviewer" src="/images/2010/06/apdev_imageviewer.jpg" alt="" width="500" height="439" /></a>
+<a href="/examples/fbconnect/" target="_blank"><img class="alignnone size-full wp-image-897" title="apdev_imageviewer" src="/images/2010/06/apdev_imageviewer.jpg" alt="" width="500" height="439" /></a>
 
 I finally had the time to write something about the <a href="http://code.google.com/p/facebook-actionscript-api/" target="_blank">facebook-actionscript-api</a> we used in one of our last projects. It&#8217;s a very interesting API when you want to add Facebook support (user management) to your site/project. There are different things you can do with this API: i.e. access user information, post on the user&#8217;s wall, get user&#8217;s photos and much much more.
 
 <!--more-->
 
-For the litte demo application I decided to use the feature to access the user&#8217;s photos to create an <a href="http://apdevblog.com/examples/fbconnect/" target="_blank">ImageViewer</a> in pure ActionScript. It&#8217;s just a small example of what you can do with the <a href="http://code.google.com/p/facebook-actionscript-api/" target="_blank">facebook-actionscript-api</a> but I think it&#8217;s a good starting point for someone who hadn&#8217;t had the chance to take a look at this whole Facebook Connect stuff.
+For the litte demo application I decided to use the feature to access the user&#8217;s photos to create an <a href="/examples/fbconnect/" target="_blank">ImageViewer</a> in pure ActionScript. It&#8217;s just a small example of what you can do with the <a href="http://code.google.com/p/facebook-actionscript-api/" target="_blank">facebook-actionscript-api</a> but I think it&#8217;s a good starting point for someone who hadn&#8217;t had the chance to take a look at this whole Facebook Connect stuff.
 
 Facebook introduced a new API some weeks ago &#8211; the Graph API &#8211; but the <a href="http://code.google.com/p/facebook-actionscript-api/" target="_blank">facebook-actionscript-api</a> is still based on the &#8220;Old REST API&#8221;. You can find a in-depth documentation of the old API here: <a href="http://developers.facebook.com/docs/reference/rest/" target="_blank">http://developers.facebook.com/docs/reference/rest/</a>
 
@@ -220,8 +220,8 @@ To display the album thumbnails we used the TileList flash component &#8211; her
 
 If you still have questions, don&#8217;t hesitate to ask.
 
-You can download the sourcecode here: [http://apdevblog.com/examples/fbconnect/source.zip ][1]  
-You can find the online demo here: <a href="http://apdevblog.com/examples/fbconnect/" target="_blank">http://apdevblog.com/examples/fbconnect/ </a>
+You can download the sourcecode here: [/examples/fbconnect/source.zip ][1]  
+You can find the online demo here: <a href="/examples/fbconnect/" target="_blank">/examples/fbconnect/ </a>
 
 Don&#8217;t forget to download the SWC from Google code: <a href="http://code.google.com/p/facebook-actionscript-api/downloads/list" target="_blank">http://code.google.com/p/facebook-actionscript-api/downloads/list</a> (it isn&#8217;t included in our sources).
 
@@ -230,4 +230,4 @@ The ImageViewer code is by no means bug-free but &#8211; as i said before &#8211
 Cheers  
 Phil 
 
- [1]: http://apdevblog.com/examples/fbconnect/source.zip
+ [1]: /examples/fbconnect/source.zip
