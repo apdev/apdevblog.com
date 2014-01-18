@@ -8,11 +8,7 @@ article {
   header {
     position: relative;
     padding-top: 2em;
-    // padding-bottom: 1em;
-    // margin-bottom: 1em;
-    // background: $img-border bottom left repeat-x;
     h1 {
-      // margin: 0;
       a {
         text-decoration: none;
       }
@@ -23,14 +19,13 @@ article {
       margin: 0;
       &.meta {
         @extend .sans;
-        text-transform: uppercase;
         position: absolute; top: 0;
+
+        time {
+          background-color: #f8f8f8;
+        }
       }
     }
-    // @media only screen and (min-width: 768px) {
-    //   margin-bottom: 1.5em;
-    //   padding-bottom: 1em;
-    // }
   }
   h2 {
     padding-top: 0.8em;
