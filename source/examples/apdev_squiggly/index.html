@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="language" content="en">
+
+<title>squiggly example / apdev</title>
+<script type="text/javascript" src="js/swfobject.js"></script>
+<script type="text/javascript">
+    // <![CDATA[
+
+    var width=550;
+    var height=300;
+	
+    var flashVersion = "9.0.115";
+
+    var movie = "apdev_squiggly.swf";
+
+    var movieName = "flashMovie";
+    var bgColor = "#000000";
+
+    var express = "expressinstall.swf";
+
+    // set these for osxmousewheel.js:
+    var mw_flashMovieId = movieName;           // the id/name of your flash app's HTML DOM element
+    var mw_flashContainerId = "flashdiv";     // the id/name of the flash element's surrounding div element
+    var replaceDiv = "flashcontent";
+
+    var flashvars = {};
+
+    var params = {};
+    params.bgcolor = bgColor;
+    params.menu = "false";
+    params.scale = "noscale";
+    params.allowFullScreen = "true";
+    params.allowScriptAccess = "always";
+
+    var attributes = {};
+    attributes.id = mw_flashMovieId;
+
+    swfobject.embedSWF(movie, replaceDiv, width, height, flashVersion, express, flashvars, params, attributes);
+    
+  // ]]>
+</script>
+<style type="text/css">
+  
+  html
+  {
+    overflow:auto;
+  }
+  
+	body 
+	{
+		background-color: #000000;
+		color: #ffffff;
+		font: 0.85em verdana,arial,helvetica,sans-serif;
+		margin: 25px;
+		padding: 0;
+	}
+
+	#flashcontent 
+	{
+
+	}
+
+</style>
+</head>
+<body>
+	<h1>example of the Apdev SpellChcker class</h1>
+  <p>You can now easily use the Squiggly spell-checking library with every TextField in Actionscript (not only Flex).</p>
+  <p>
+    <pre>
+import com.apdevblog.text.spelling.ApdevSpellChecker;
+// ...
+
+// create + add new TextField
+var txt:TextField = new TextField();
+addChild(txt);
+
+// create new SpellChecker and set TextField as target
+// second parameter is the URL to the dictionary
+var url:String = "data/usa.zwl";
+var checker:ApdevSpellChecker = new ApdevSpellChecker(txt, url);
+    </pre>
+  </p>
+	<div id="flashdiv">
+    <div id="flashcontent">
+      you should see our spellchecker here (alternativ content)
+    </div>
+	</div>
+	<p>
+    <ul>
+      <li>Adobe Squiggly: <a href="http://labs.adobe.com/technologies/squiggly/" target="_blank">http://labs.adobe.com/technologies/squiggly/</a></li>
+      <li>blog post: <a href="http://apdevblog.com/actionscript-spell-checking-with-squiggly-as3-only-and-flash-9-compatible/" target="_blank">http://apdevblog.com/actionscript-spell-checking-with-squiggly-as3-only-and-flash-9-compatible/</a></li>
+    </ul>
+	</p>
+	<p>&copy; 2009 apdeblog.com</p>
+
+	<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1992824-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../override.css" type="text/css"><meta name="keywords" content="PreLoader,com.apdevblog.load.PreLoader,autoUnload,content,contentLoaderInfo,isImage,isInit,isLoaded,loader,loaderContext,scale,smooth,url,urlRequest,closeLoad,load,loadAfter,loadImmediately,loadNext,logQueue,toString,unload"><title>com.apdevblog.load.PreLoader</title></head><body><script language="javascript" type="text/javascript" src="../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'PreLoader - Apdev PreLoader - API Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">Apdev PreLoader - API Documentation</td><td class="titleTableTopNav" align="right"><a href="../../../package-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../class-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../all-index-A.html" onclick="loadClassListFrame('../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../index.html?com/apdevblog/load/PreLoader.html&amp;com/apdevblog/load/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">PreLoader</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("PreLoader"); titleBar_setSubNav(false,true,false	,false,false,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.apdevblog.load</a></td></tr><tr><td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  PreLoader</td></tr><tr><td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">PreLoader  <img src="../../../images/inherit-arrow.gif" title="Inheritance" alt="Inheritance" class="inheritArrow"> flash.display.Sprite</td></tr></table><p></p><table cellpadding="0" cellspacing="0" border="0"><tr><td style="white-space:nowrap" valign="top"><b> Runtime Versions :&nbsp;</b></td><td>AIR 1.0, Flash Player  9</td></tr></table><p></p><p></p><p></p>
+	 PreLoader works similar to the Loader class (loads SWF, GIF, JPG and PNG) but has an 
+	 integrated loader queue and some conveniences.
+	 
+	 <p>Example implementation:
+	 <div class="listing"><pre>
+     var img:PreLoader = new PreLoader();
+     img.addEventListener(ProgressEvent.PROGRESS, _onImgProgress);
+     img.addEventListener(Event.COMPLETE, _onImgLoaded);
+     img.load("image.jpg");
+     addChild(img);
+     
+     function _onImgProgress(event : ProgressEvent)
+     {
+       var perc:Number = event.bytesLoaded / event.bytesTotal;
+       trace(perc);
+     }
+     
+     function _onImgLoaded(event : Event)
+     {
+       trace("image loaded");
+     }
+     </pre></div>
+	              </p>
+	 
+	              <p>
+                  <code>PreLoader</code> communicates with the static class <code>PreloadProxy</code>, which is taking care
+	 of the actual loader queue. Only one loading process at a time is executed.</p>
+	 
+	              <p>A typical use would be to add all stuff needed to load in an order that makes 
+	 somehow sense (i.e. intro.swf, home.swf, image1.png, image2.png, image3.png) with
+	 the standard method <code>load</code>. Read a <a href="http://code.google.com/p/apdev-preloader-queue/wiki/TypicalScenario" target="external">typical scenario</a>.</p>
+	 
+	              <p>During runtime you can prioritize a loading process by using <code>loadNext()</code>, <code>loadAfter()</code>, 
+	 and <code>loadImmidately()</code>.</p>
+	 
+	              <p>The PreLoader fires the exact same events as the standard Loader. Just make sure
+	 you set the listeners directly to the <code>PreLoader</code> instead of <code>contentLoaderInfo</code>.</p>
+	 
+	              <p>Example:
+	 <div class="listing"><pre>
+     // set listener with Loader
+     
+     var img:Loader = new Loader();
+     img.contentLoaderInfo.addEventListener(Event.COMPLETE, _onImgLoaded);
+     
+     // set listener with PreLoader
+       var img:PreLoader = new PreLoader();
+     img.addEventListener(Event.COMPLETE, _onImgLoaded);
+     </pre></div>
+               </p>
+	 
+	           <p></p><p><span class="classHeaderTableLabel">See also</span></p><div class="seeAlso"><a href="PreloadProxy.html" target="">PreloadProxy</a></div><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#autoUnload" class="signatureLink">autoUnload</a> : Boolean<div class="summaryTableDescription">
+		 If true, unload is called, when the PreLoader is removed from stage (to 
+		 prepare the Loader for garbage collection).</div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#content" class="signatureLink">content</a> : DisplayObject<div class="summaryTableDescription">[read-only] 
+		 returns the content DisplayObject of the containt loader.</div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#contentLoaderInfo" class="signatureLink">contentLoaderInfo</a> : LoaderInfo<div class="summaryTableDescription">[read-only] 
+		 returns the LoaderInfo
+		 
+		 Similar to Loader.contentLoaderInfo.
+		 
+		 </div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isImage" class="signatureLink">isImage</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 returns whether the PreLoader loads an image
+		 </div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isInit" class="signatureLink">isInit</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 returns if is init.</div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#isLoaded" class="signatureLink">isLoaded</a> : Boolean<div class="summaryTableDescription">[read-only] 
+		 returns if the loading is complete.</div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#loader" class="signatureLink">loader</a> : Loader<div class="summaryTableDescription">[read-only] 
+		 returns the Loader.</div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#loaderContext" class="signatureLink">loaderContext</a> : LoaderContext<div class="summaryTableDescription">
+		 gets and sets the LoaderContext of the load process.</div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#scale" class="signatureLink">scale</a> : Number<div class="summaryTableDescription">[write-only] 
+		 sets scaleX and scaleY in one go
+		 
+		 </div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#smooth" class="signatureLink">smooth</a> : Boolean<div class="summaryTableDescription">
+		 gets and sets whether the PreLoaded should be smoothed when scaled 
+		 (this applies only when loading image).</div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#url" class="signatureLink">url</a> : String<div class="summaryTableDescription">[read-only] 
+		 returns the url (if passed already).</div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#urlRequest" class="signatureLink">urlRequest</a> : URLRequest<div class="summaryTableDescription">[read-only] 
+		 returns the URLRequest (if passed already).</div></td><td class="summaryTableOwnerCol">PreLoader</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#PreLoader()" class="signatureLink">PreLoader</a>()</div><div class="summaryTableDescription">
+		 Constructor
+		 </div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#closeLoad()" class="signatureLink">closeLoad</a>():void</div><div class="summaryTableDescription">
+		 stops the load process (if currently loading) or removes load request from queue (if in queue).</div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#load()" class="signatureLink">load</a>(urlStringOrURLRequest:*):void</div><div class="summaryTableDescription">
+		 loads the passed url (or URLRequest) by adding it to the end of the loader queue.</div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#loadAfter()" class="signatureLink">loadAfter</a>(urlStringOrURLRequest:*, beforePreLoader:<a href="../../../com/apdevblog/load/PreLoader.html">PreLoader</a>):void</div><div class="summaryTableDescription">
+		 Loads the passed url (or URLRequest) by adding it to the loader queue after the passed PreLoader object.</div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#loadImmediately()" class="signatureLink">loadImmediately</a>(urlStringOrURLRequest:*):void</div><div class="summaryTableDescription">
+		 loads the passed url (or URLRequest) by canceling the current load and starts the load immediately.</div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#loadNext()" class="signatureLink">loadNext</a>(urlStringOrURLRequest:*):void</div><div class="summaryTableDescription">
+		 loads the passed url (or URLRequest) by adding it after the current loading request.</div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#toString()" class="signatureLink">toString</a>():String</div><div class="summaryTableDescription">
+		 returns [PreLoader] thePassedUrl (i.e.</div></td><td class="summaryTableOwnerCol">PreLoader</td></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#unload()" class="signatureLink">unload</a>():void</div><div class="summaryTableDescription">
+		 unloads the loader.</div></td><td class="summaryTableOwnerCol">PreLoader</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="autoUnload"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">autoUnload</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>autoUnload:Boolean</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 If true, unload is called, when the PreLoader is removed from stage (to 
+		 prepare the Loader for garbage collection).
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get autoUnload():Boolean</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set autoUnload(value:Boolean):void</code><br/></div><a name="propertyDetail"></a><a name="content"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">content</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>content:DisplayObject</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 returns the content DisplayObject of the containt loader.
+		 
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get content():DisplayObject</code><br/><p><span class="label">See also</span></p><div class="seeAlso">flash.display.Loader.content</div></div><a name="propertyDetail"></a><a name="contentLoaderInfo"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">contentLoaderInfo</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>contentLoaderInfo:LoaderInfo</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 returns the LoaderInfo
+		 
+		 <p>Similar to <code>Loader.contentLoaderInfo</code>.</p>
+		 
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get contentLoaderInfo():LoaderInfo</code><br/><p><span class="label">See also</span></p><div class="seeAlso">flash.display.LoaderInfo<br/>flash.display.Loader.contentLoaderInfo</div></div><a name="propertyDetail"></a><a name="isImage"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isImage</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isImage:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 returns whether the PreLoader loads an image
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isImage():Boolean</code><br/></div><a name="propertyDetail"></a><a name="isInit"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isInit</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isInit:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 returns if is init.
+		 
+		 <p>Is set to true, when <code>onLoadInit</code> is received.</p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isInit():Boolean</code><br/></div><a name="propertyDetail"></a><a name="isLoaded"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">isLoaded</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>isLoaded:Boolean</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 returns if the loading is complete.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isLoaded():Boolean</code><br/></div><a name="propertyDetail"></a><a name="loader"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">loader</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>loader:Loader</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 returns the Loader.
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get loader():Loader</code><br/></div><a name="propertyDetail"></a><a name="loaderContext"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">loaderContext</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>loaderContext:LoaderContext</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 gets and sets the LoaderContext of the load process. 
+		 
+		 <p>Might be needed when using the <code>smooth</code> option and loading images from
+		 a different domain.</p>
+		 
+		 <p>Caution: Has to be set before <code>load</code> is called.</p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get loaderContext():LoaderContext</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set loaderContext(value:LoaderContext):void</code><br/></div><a name="propertyDetail"></a><a name="scale"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">scale</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>scale:Number</code>&nbsp;&nbsp;[write-only] <p></p><p></p><p>
+		 sets scaleX and scaleY in one go
+		 
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set scale(value:Number):void</code><br/></div><a name="propertyDetail"></a><a name="smooth"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">smooth</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>smooth:Boolean</code>&nbsp;&nbsp;[read-write] <p></p><p></p><p>
+		 gets and sets whether the PreLoaded should be smoothed when scaled 
+		 (this applies only when loading image).
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get smooth():Boolean</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set smooth(value:Boolean):void</code><br/></div><a name="propertyDetail"></a><a name="url"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">url</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>url:String</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 returns the url (if passed already).
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get url():String</code><br/></div><a name="propertyDetail"></a><a name="urlRequest"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">urlRequest</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>urlRequest:URLRequest</code>&nbsp;&nbsp;[read-only] <p></p><p></p><p>
+		 returns the URLRequest (if passed already).
+		 
+		 <p>Note: If you passed a <code>String</code> to the <code>load</code> method
+		 the automaticly generated <code>URLRequest</code> will be returned.</p>
+		 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get urlRequest():URLRequest</code><br/></div><a name="constructorDetail"></a><div class="detailSectionHeader">Constructor Detail</div><a name="PreLoader()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">PreLoader</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td></tr></table><div class="detailBody"><code>public function PreLoader()</code><p></p><p>
+		 Constructor
+		 </p></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="closeLoad()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">closeLoad</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function closeLoad():void</code><p></p><p></p><p>
+		 stops the load process (if currently loading) or removes load request from queue (if in queue).
+		 
+		 <p>Note: <code>closeLoad</code> might or might not work locally. If you have problems using <code>closeLoad</code> locally
+		 test your project online.</p>
+		 </p></div><a name="load()"></a><a name="load()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">load</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function load(urlStringOrURLRequest:*):void</code><p></p><p></p><p>
+		 loads the passed url (or <code>URLRequest</code>) by adding it to the end of the loader queue.
+		 
+		 <p>Example:
+		 <div class="listing"><pre>
+         var img1:PreLoader = new PreLoader();
+         img1.load("img1.jpg");
+         
+         var img2:PreLoader = new PreLoader();
+         img2.load("img2.jpg");
+         
+         var img3:PreLoader = new PreLoader();
+         img3.load("img3.jpg");
+         
+         var img4:PreLoader = new PreLoader();
+         img4.load("img4.jpg");
+         
+         // now the queue looks like this:
+         // img1.jpg, img2.jpg, img3.jpg, img4.jpg
+         // where img1.jpg is currently loading
+         </pre></div></p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">urlStringOrURLRequest</span>:*</code> &mdash; url as <code>String</code> ("image.png") or <code>URLRequest</code>.
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="PreLoader.html#loadNext()" target="">loadNext()</a><br/><a href="PreLoader.html#loadAfter()" target="">loadAfter()</a><br/><a href="PreLoader.html#loadImmediately()" target="">loadImmediately()</a></div></div><a name="loadAfter()"></a><a name="loadAfter(,com.apdevblog.load.PreLoader)"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">loadAfter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function loadAfter(urlStringOrURLRequest:*, beforePreLoader:<a href="../../../com/apdevblog/load/PreLoader.html">PreLoader</a>):void</code><p></p><p></p><p>
+		 Loads the passed url (or <code>URLRequest</code>) by adding it to the loader queue after the passed PreLoader object.
+		 
+		 <p>This call will be ignored when its currently loading.</p>
+		 
+		 <p>Example:
+		 <div class="listing"><pre>
+         var img1:PreLoader = new PreLoader();
+         img1.load("img1.jpg");
+         
+         var img2:PreLoader = new PreLoader();
+         img2.load("img2.jpg");
+         
+         var img3:PreLoader = new PreLoader();
+         img3.loadAfter("img3.jpg", img1);
+         
+         var img4:PreLoader = new PreLoader();
+         img4.loadAfter("img4.jpg", img3);
+         
+         // now the queue looks like this:
+         // img1.jpg, img3.jpg, img4.jpg, img2.jpg
+         // where img1.jpg is currently loading
+         </pre></div></p>
+		  
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">urlStringOrURLRequest</span>:*</code> &mdash; url as <code>String</code> ("image.png") or <code>URLRequest</code>.
+		 </td></tr><tr><td class="paramSpacer">&nbsp;</td></tr><tr><td width="20px"></td><td><code><span class="label">beforePreLoader</span>:<a href="../../../com/apdevblog/load/PreLoader.html">PreLoader</a></code> &mdash; <code>PreLoader</code> instance to queue urlStringOrURLRequest after 
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="PreLoader.html#load()" target="">load()</a><br/><a href="PreLoader.html#loadNext()" target="">loadNext()</a><br/><a href="PreLoader.html#loadImmediately()" target="">loadImmediately()</a></div></div><a name="loadImmediately()"></a><a name="loadImmediately()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">loadImmediately</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function loadImmediately(urlStringOrURLRequest:*):void</code><p></p><p></p><p>
+		 loads the passed url (or <code>URLRequest</code>) by canceling the current load and starts the load immediately.
+		 
+		 <p>This call will be ignored when its currently loading.</p>
+		 
+		 <p>Example:
+		 <div class="listing"><pre>
+         var img1:PreLoader = new PreLoader();
+         img1.load("img1.jpg");
+         
+         var img2:PreLoader = new PreLoader();
+         img2.load("img2.jpg");
+         
+         var img3:PreLoader = new PreLoader();
+         img3.load("img3.jpg");
+         
+         var img4:PreLoader = new PreLoader();
+         img4.loadImmediately("img4.jpg");
+         
+         // now the queue looks like this:
+         // img4.jpg, img1.jpg, img2.jpg, img3.jpg
+         // where img4.jpg is currently loading
+         </pre></div></p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">urlStringOrURLRequest</span>:*</code> &mdash; url as <code>String</code> ("image.png") or <code>URLRequest</code>.
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="PreLoader.html#load()" target="">load()</a><br/><a href="PreLoader.html#loadNext()" target="">loadNext()</a><br/><a href="PreLoader.html#loadAfter()" target="">loadAfter()</a></div></div><a name="loadNext()"></a><a name="loadNext()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">loadNext</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function loadNext(urlStringOrURLRequest:*):void</code><p></p><p></p><p>
+		 loads the passed url (or <code>URLRequest</code>) by adding it after the current loading request.
+		 
+		 <p>This call will be ignored when its currently loading.</p>
+		 
+		 <p>Example:
+		 <div class="listing"><pre>
+         var img1:PreLoader = new PreLoader();
+         img1.load("img1.jpg");
+         
+         var img2:PreLoader = new PreLoader();
+         img2.load("img2.jpg");
+         
+         var img3:PreLoader = new PreLoader();
+         img3.load("img3.jpg");
+         
+         var img4:PreLoader = new PreLoader();
+         img4.loadNext("img4.jpg");
+         
+         // now the queue looks like this:
+         // img1.jpg, img4.jpg, img2.jpg, img3.jpg
+         // where img1.jpg is currently loading
+         </pre></div></p>
+		 
+		 </p><p><span class="label"> Parameters </span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20px"></td><td><code><span class="label">urlStringOrURLRequest</span>:*</code> &mdash; url as <code>String</code> ("image.png") or <code>URLRequest</code>.
+		 
+		 </td></tr></table></p><p><span class="label">See also</span></p><div class="seeAlso"><a href="PreLoader.html#load()" target="">load()</a><br/><a href="PreLoader.html#loadNext()" target="">loadNext()</a><br/><a href="PreLoader.html#loadImmediately()" target="">loadImmediately()</a></div></div><a name="toString()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">toString</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code>override public function toString():String</code><p></p><p></p><p>
+		 returns [PreLoader] thePassedUrl (i.e. [PreLoader] http://www.domain.com/image1.png).
+		 </p><p></p><span class="label">Returns</span><table cellpadding="0" cellspacing="0" border="0"><tr><td width="20"></td><td><code>String</code></td></tr></table></div><a name="unload()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">unload</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td></tr></table><div class="detailBody"><code> public function unload():void</code><p></p><p></p><p>
+		 unloads the loader.
+		 
+		 </p><p><span class="label">See also</span></p><div class="seeAlso">flash.display.Loader.unload()</div></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Apdev PreLoader - aron / philipp development blog - apdevblog.com</footer><br/>Sonntag Nov 15 2009, 05:29 PM +01:00  </center></div></body></html><!--Apdev PreLoader - aron / philipp development blog - apdevblog.com<br/>Sonntag Nov 15 2009, 05:29 PM +01:00  -->

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index>
+	<title>Source of apdev_datagrid2</title>
+	<nodes>
+		<node label="src" icon="classpathIcon" expanded="true">
+			<node label="assets">
+				<node label="bitmaps">
+					<node label="add.png" icon="imageIcon" url="source/assets/bitmaps/add.png.html"/>
+				</node>
+			</node>
+			<node label="com.apdevblog.examples.flexdatagrid2" icon="packageIcon" expanded="true">
+				<node label="MoneyRenderer.mxml" icon="mxmlIcon" url="source/com/apdevblog/examples/flexdatagrid2/MoneyRenderer.mxml.html"/>
+				<node label="TimeIntervalRenderer.mxml" icon="mxmlIcon" url="source/com/apdevblog/examples/flexdatagrid2/TimeIntervalRenderer.mxml.html"/>
+			</node>
+			<node selected="true" label="apdev_datagrid2.mxml" icon="mxmlAppIcon" url="source/apdev_datagrid2.mxml.html"/>
+		</node>
+	</nodes>
+</index>

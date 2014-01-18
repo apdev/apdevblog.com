@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="language" content="de">
+
+<title>PreLoader - Example implementation</title>
+<script type="text/javascript" src="js/browser.js"></script>
+<script type="text/javascript" src="js/resizeflash.js"></script>
+<script type="text/javascript" src="js/swffit.js"></script>
+<script type="text/javascript" src="js/swfobject.js"></script>
+<script type="text/javascript" src="js/swfaddress.js"></script>
+<script type="text/javascript" src="js/swfmacmousewheel.js"></script>
+<script type="text/javascript">
+    // <![CDATA[
+
+    var width="550";
+    var height="400";
+	
+    var flashVersion = "9.0.0";
+
+    var movie = "preloader_example.swf";
+
+    var movieName = "flashMovie";
+    var bgColor = "#AAAAAAA";
+
+    var express = "expressinstall.swf";
+
+    // set these for osxmousewheel.js:
+    var mw_flashMovieId = movieName;           // the id/name of your flash app's HTML DOM element
+    var mw_flashContainerId = "flashdiv";     // the id/name of the flash element's surrounding div element
+    var replaceDiv = "flashcontent";
+
+    var flashvars = {};
+    flashvars.browser = BrowserDetect.browser;
+    flashvars.os = BrowserDetect.OS;
+
+    var params = {};
+    params.bgcolor = bgColor;
+    params.menu = "false";
+    params.scale = "noscale";
+    params.allowFullScreen = "true";
+    params.allowScriptAccess = "always";
+    //params.wmode = "opaque";
+
+    var attributes = {};
+    attributes.id = mw_flashMovieId;
+    //attributes.name = "myDynamicContent";
+
+    swfobject.embedSWF(movie, replaceDiv, width, height, flashVersion, express, flashvars, params, attributes);    
+  // ]]>
+</script>
+<style type="text/css">
+  
+  html
+  {
+    overflow:auto;
+  }
+  
+	body 
+	{
+		background-color: #ffffff;
+		color: #000000;
+		font: verdana,arial,helvetica,sans-serif;
+		margin: 0;
+		padding: 0;
+	}
+
+	#flashcontent 
+	{
+
+	}
+
+</style>
+</head>
+<body>
+	<div id="flashdiv">
+    <div id="flashcontent">
+      <table width="100%" height="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr align="center" valign="middle">
+          <td><div><a href="http://www.adobe.com/go/getflashplayer" alt="Flashplayer herunterladen" title="Flashplayer herunterladen">Flashplayer</a></div></td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <p>
+        You can also find the example at <a href="http://code.google.com/p/as3-preloader-queue/source/browse/trunk/com/apdevblog/example/PreLoaderExample.as">google code</a>.
+      </p>
+      <p>
+        <pre>
+  var folder:String = "http://apdevblog.com/examples/apdev_preloader/img/";
+  var images:Array = ["img01.png", "img02.png", "img03.png", "img04.png"];
+  var _txt1 : TextField;
+  var _txt2 : TextField;
+
+  for (var i : int = 0; i < images.length; i++) 
+  {
+    var img:PreLoader = new PreLoader();
+    img.addEventListener(ProgressEvent.PROGRESS, _onProgress, false, 0, true);
+    img.addEventListener(Event.COMPLETE, _onImgLoaded, false, 0, true);
+    img.load(folder + images[i]);
+    img.x = i * 50;
+    addChild(img);
+  }
+
+  _txt1 = new TextField();
+  _txt1.autoSize = TextFieldAutoSize.LEFT;
+  _txt1.x = 5;
+  _txt1.y = 320;
+  addChild(_txt1);
+
+  _txt2 = new TextField();
+  _txt2.autoSize = TextFieldAutoSize.LEFT;
+  _txt2.x = 5;
+  _txt2.y = 340;
+  addChild(_txt2);
+
+  function _onProgress(event : ProgressEvent)
+  {
+    _txt1.text = (event.bytesLoaded / event.bytesTotal).toString();
+  }
+
+  function _onImgLoaded(event : Event)
+  {
+    var preLoader:PreLoader = event.target as PreLoader;
+    _txt2.text = preLoader.url + " loaded";
+  }
+        </pre>
+      </p>    
+    </div>
+	</div>
+	<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1992824-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>	
+</body>
+</html>

@@ -1,0 +1,39 @@
+<?php
+
+//
+class ExhibitVo 
+{
+  public $_explicitType = 'com.apdevblog.examples.indexhibit.model.vo.ExhibitVo';
+
+	public $id;
+	public $title;
+	public $content;
+	public $date;
+	public $category;
+	public $order;
+	public $url;
+	public $year;
+	
+	public $images;
+	
+	public function ExhibitVo($obj=null)
+	{
+		if($obj != null)
+		{
+			$this->id = $obj['id'];
+			$this->title = $obj['title'];
+			
+			$this->content = preg_replace("/[\n\r]/","",$obj['content']);
+			$this->content = str_ireplace("<p>", "", $this->content);
+			$this->content = str_ireplace("</p>", "<br /><br />", $this->content);
+			
+			$this->date = $obj['pdate'];
+			$this->category = $obj['sec_desc'];
+			$this->order = $obj['sec_ord'];
+			$this->url = $obj['url'];
+			$this->year = $obj['year'];
+		}
+	}
+	
+}
+?>

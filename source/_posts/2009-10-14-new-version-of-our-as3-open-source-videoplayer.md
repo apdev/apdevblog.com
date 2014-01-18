@@ -22,9 +22,9 @@ tags:
 Hi there.  
 After some inquiries we finally added the possibility to customize the <a href="http://code.google.com/p/apdev-videoplayer/" target="_blank">Apdev VideoPlayer</a> &#8211; only changing colors at this time but it&#8217;s a first step in the right direction &#8230;
 
-<a href="http://apdevblog.com/examples/apdev_videoplayer/html_skinned.html" target="_blank"><img alt="skinned Apdev VideoPlayer" src="http://apdevblog.com/examples/apdev_videoplayer/screenshot_skinned.jpg" title="apdev videoplayer skinned" class="alignnone" width="349" height="290" /></a>
+<a href="/examples/apdev_videoplayer/html_skinned.html" target="_blank"><img alt="skinned Apdev VideoPlayer" src="/examples/apdev_videoplayer/screenshot_skinned.jpg" title="apdev videoplayer skinned" class="alignnone" width="349" height="290" /></a>
 
-You can now change any color of any object/control that is used within the videoplayer &#8211; but check the <a href="http://apdevblog.com/examples/apdev_videoplayer/docs/com/apdevblog/ui/video/style/ApdevVideoPlayerDefaultStyle.html" target="_blank">ApdevVideoPlayerDefaultStyle.as</a> for all the attributes that can be manipulated. And it&#8217;s up to you whether you change the attributes using pure ActionScript (1) or our html-version of the videoplayer and pass the values in via flashvars (2). With approach 2 you don&#8217;t even have to know ActionScript or open a flash-file &#8211; just embed the videoplayer-swf into your website and customize it via flashvars.  
+You can now change any color of any object/control that is used within the videoplayer &#8211; but check the <a href="/examples/apdev_videoplayer/docs/com/apdevblog/ui/video/style/ApdevVideoPlayerDefaultStyle.html" target="_blank">ApdevVideoPlayerDefaultStyle.as</a> for all the attributes that can be manipulated. And it&#8217;s up to you whether you change the attributes using pure ActionScript (1) or our html-version of the videoplayer and pass the values in via flashvars (2). With approach 2 you don&#8217;t even have to know ActionScript or open a flash-file &#8211; just embed the videoplayer-swf into your website and customize it via flashvars.  
 For further information, see the upcoming examples.
 
 <!--more-->
@@ -129,7 +129,7 @@ addChild(video);
 
 Sooo &#8230; there is no reason why you shouldn&#8217;t be already using our VideoPlayer :D  
 <a href="http://code.google.com/p/apdev-videoplayer/source/checkout" target="_blank">Check it out</a>.  
-Or take a look at the <a href="http://apdevblog.com/examples/apdev_videoplayer/docs/" target="_blank">docs</a> first and then download [the whole package][1].
+Or take a look at the <a href="/examples/apdev_videoplayer/docs/" target="_blank">docs</a> first and then download [the whole package][1].
 
 Enough for now &#8230; but keep the feedback coming, we&#8217;re still eager to improve the player over time.
 

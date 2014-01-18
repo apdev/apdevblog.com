@@ -40,5 +40,5 @@ phil
 
 
  [1]: http://code.google.com/p/apdev-videoplayer/
- [2]: http://apdevblog.com/examples/apdev_videoplayer/htmlvideo_skinned.html
- [3]: http://apdevblog.com/examples/apdev_videoplayer/htmlvideo_fullbrowser.html
+ [2]: /examples/apdev_videoplayer/htmlvideo_skinned.html
+ [3]: /examples/apdev_videoplayer/htmlvideo_fullbrowser.html

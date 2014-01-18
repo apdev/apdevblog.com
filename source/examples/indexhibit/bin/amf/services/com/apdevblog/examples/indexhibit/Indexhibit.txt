@@ -1,0 +1,72 @@
+<?php
+
+//error_reporting(E_ALL);
+//ini_set("display_errors", "on");
+
+include_once("model/vo/ExhibitVo.php");
+include_once("model/vo/ImageVo.php");
+
+class Indexhibit 
+{
+	var $mySql;
+
+	public function Indexhibit()
+	{
+		// mysql access initialization ...
+		include("../../../../../includes/dbaccess.php");
+		include("../../../../../includes/mysql.php");
+		
+		$this->mySql = new MySql($dbaccess);
+	}
+	
+	
+	//////////////////////////////////////////////////////////////////////////////
+	// public ////////////////////////////////////////////////////////////////////
+	public function getAllExhibits() 
+	{
+		$return_array = array();
+		$return_array["backendstatus"] = "ok";
+		
+		$exhibits = array();
+		
+		$sql = "SELECT obj.*, sec.sec_desc, sec.sec_ord FROM ndxz_objects as obj LEFT JOIN ndxz_sections as sec ON obj.section_id = sec.secid WHERE status = 1 AND hidden = 0";
+		
+		$result = $this->mySql->resultQuery($sql);
+		
+		if($result->countRows() > 0) 
+		{
+      while($row = $result->fetchRow())
+      {
+        $exhibit = new ExhibitVo($row);
+        
+        // get images
+        $sql = "SELECT * FROM ndxz_media WHERE media_ref_id = " . $row['id'] . " ORDER BY media_order ASC";
+        $subresult = $this->mySql->resultQuery($sql);
+        
+        if($subresult->countRows() > 0) 
+        {
+          $exhibit->images = array();
+          while($image = $subresult->fetchRow())
+          {
+            array_push($exhibit->images, new ImageVo($image));
+          }
+        }
+        
+        $subresult->freeResult();
+        
+        // put exhibit in array
+        array_push($exhibits, $exhibit);
+      }
+		}
+		else
+		{
+      $return_array["backendstatus"] = "ko";
+		}
+		
+		$return_array["exhibits"] = $exhibits;
+		
+		return $return_array;
+	}
+	
+}
+?>

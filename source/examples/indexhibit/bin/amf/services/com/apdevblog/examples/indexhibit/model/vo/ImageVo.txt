@@ -1,0 +1,31 @@
+<?php
+
+//
+class ImageVo 
+{
+  public $_explicitType = 'com.apdevblog.examples.indexhibit.model.vo.ImageVo';
+	
+	public $id;
+	public $file;
+	public $title;
+	public $caption;
+	public $width;
+	public $height;
+	public $order;
+	
+	public function ImageVo($obj=null)
+	{
+		if($obj != null)
+		{
+			$this->id = $obj['media_id'];
+			$this->file = $obj['media_file'];
+			$this->title = $obj['media_title'];
+			$this->caption = $obj['media_caption'];
+			$this->width = $obj['media_x'];
+			$this->height = $obj['media_y'];
+			$this->order = $obj['media_order'];
+		}
+	}
+	
+}
+?>

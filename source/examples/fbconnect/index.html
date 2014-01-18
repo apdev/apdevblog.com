@@ -1,0 +1,137 @@
+<html>
+	<head>
+		<title>apdev / Facebook Image Viewer Demo</title>
+
+		<!-- include the API from facebook's server  -->
+		<script src="http://static.ak.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" type="text/javascript"></script> 
+		
+		<!-- include swfobject library -->
+		<script type="text/javascript" src="js/swfobject.js"></script>
+		<script type="text/javascript" src="js/swffit.js"></script>
+		
+		<style type="text/css"> 
+
+		  html
+		  {
+		    overflow:auto;
+		  }
+
+			body 
+			{
+				background-color: #000000;
+				color: #ffffff;
+				font: .5em/1.0em verdana,arial,helvetica,sans-serif;
+				margin: 0;
+				padding: 0;
+			}
+
+			#flashcontent 
+			{
+		    	outline:none;
+			}
+
+			object { outline:none; }
+
+		</style>
+		
+	</head>
+	
+	<body>
+	
+		<script type="text/javascript">
+
+			//Local Variable with Flash Content id. default = flashcontent
+			var as_swf_name = "flashcontent";
+			
+			var flashVars = 
+			{
+				as_swf_name: "flashcontent"
+			};
+
+			var params = 
+			{
+				allowScriptAccess: "always",
+				wmode: "opaque", 
+				bgcolor: "#000000",
+				menu: "false",
+				scale: "noscale",
+				allowFullScreen: "true",
+				allowScriptAccess: "always"
+			};
+
+			var attributes =
+			{
+				
+			};
+
+			//JavaScript Connect methods
+			function fbLogin(api_key)
+			{
+				log("fbLogin("+api_key+")");
+				
+				FB.init(api_key, 'xd_receiver.htm', {"ifUserConnected":permissions});
+
+				FB.ensureInit(function() 
+				{
+					FB.Connect.get_status().waitUntilReady(function(status) 
+					{
+						log("status: " + status);
+						
+						switch (status) 
+						{
+							case FB.ConnectState.connected:
+								loggedIn = true;
+								break;
+							
+							case FB.ConnectState.appNotAuthorized:
+							case FB.ConnectState.userNotLoggedIn:
+								FB.Connect.requireSession();
+								loggedIn = false;
+								break;
+						}
+					});
+				});
+					
+			}
+			
+			function fbLogout()
+			{
+				log("fbLogout()");
+				FB.Connect.logout(onLogoutHandler);
+			}
+
+			function permissions()
+			{
+				log("permissions()");
+				FB.Connect.showPermissionDialog('user_photos', onLoginHandler);
+			};
+
+			function onLoginHandler()
+			{
+				var session = FB.Facebook.apiClient.get_session();
+				log("onLoginHandler() >>> session: " + session);
+				flashcontent.onLogin(session);
+			}
+			
+			function onLogoutHandler()
+			{
+				log("onLogoutHandler()");
+				flashcontent.onLogout();
+			}
+
+			function log(msg)
+			{
+				//alert(msg);
+			}
+			
+
+			//create your instance of your .swf
+			swfobject.embedSWF("fb.swf", "flashcontent", "500", "400", "10.0.0", "expressInstall.swf", flashVars, params);
+			swffit.fit("flashcontent");
+			
+		</script>
+		<!--  this is where your flash content will be placed when created -->
+		<div id="flashcontent"></div>
+		
+	</body>
+</html>
