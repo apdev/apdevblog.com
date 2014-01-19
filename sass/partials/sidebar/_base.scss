@@ -56,21 +56,6 @@ aside.sidebar {
     // @include shadow-box($border: #fff .3em solid);
   }
   
-  ul {
-    margin-bottom: 0.5em;
-    margin-left: 0;
-  }
-  
-  li {
-    list-style: none;
-    padding: .5em 0;
-    margin: 0;
-    // @extend .side-shadow-border;
-    p:last-child {
-      margin-bottom: 0;
-    }
-  }
-  
   a {
     color: inherit;
     text-decoration: none;
