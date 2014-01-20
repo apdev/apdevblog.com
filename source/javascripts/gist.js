@@ -12,20 +12,35 @@ function loadGists() {
   $.each(gists, function(name, data) {
     $.getJSON(name + '?callback=?', function(data) {
       var gist = gists[name];
-      gist.data = data;
-      gist.files = $(gist.data.div).find('.gist-file');
-      gist.outer = $(gist.data.div).first().html('');
+
+      var gistMarkupFragment = document.createDocumentFragment();
+      // add div since you can't innerHTML on a documentFragment
+      var div = document.createElement("div");
+      div.innerHTML = data.div;
+      gistMarkupFragment.appendChild(div);
+
+      // get all file div's
+      var gistFileEl = gistMarkupFragment.querySelectorAll(".gist-file");
+
+      // get div that contains all file divs
+      var gistContainerElement = gistMarkupFragment.children.item(0).children.item(0);
+      gistContainerElement.innerHTML = "";
+
       // Iterate elements refering to this gist
       $(gist.targets).each(function(idx, target) {
         var file = target.get(0).file;
         if(file) {
-          var o = gist.outer.clone();
-          var c = '<div class="gist-file">' + $(gist.files.get(gist.data.files.indexOf(file))).html() + '</div>';
-          o.html(c);
-          target.replaceWith(o);
+          var o = gistContainerElement.cloneNode();
+          // TODO find matching file element
+          o.appendChild(gistFileEl.item(0));
+
+          // override the anchor
+          var targetParent = target[0].parentNode;
+          targetParent.innerHTML = "";
+          targetParent.appendChild(o);
         }
         else {
-          target.replaceWith(gist.data.div);
+          target.replaceWith(data.div);
         }
       });
     });
