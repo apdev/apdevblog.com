@@ -3,7 +3,17 @@ title: Aron Woost
 layout: page
 sharing: false
 ---
-<p>Aron Woost has been working in the online industry since 1999 starting his career in Hamburg as a Media Developer for print and digital. He there specialized in the development of advanced Flash web applications. After moving to Berlin he works as a freelance Flash and Flex developer for various agencies as well as for clients directly.</p>
-<p>He creates applications in Flash and Flex for websites, AIR applications or online games.</p>
+<p>Aron Woost has been working in the online industry since 1999 starting his career in Hamburg as a Media Developer for print and digital. After moving to Berlin in 2004 he worked as a freelance Flash and Flex developer for various agencies as well as for clients directly.</p>
+
+<p>Since 2009 he does product development in HTML(5), CSS and JavaScript, where JavaScript is his focus.</p>
+
 <p>Contact Aron: aron at apdevblog dot com</p>
-<p><a href="http://linkedin.com/in/aronwoost"><img src="/images/img/linkedin_btn.jpg" /></a><a href="http://twitter.com/aronwoost"><img src="/images/img/twitter_btn.jpg" /></a><a href="https://www.xing.com/profile/Aron_Woost"><img src="/images/img/xing_btn.jpg" /></a><a href="http://www.facebook.com/aronwoost"><img src="/images/img/facebook_btn.jpg" /></a>
+
+Elsewhere in the interwebs
+<ul>
+  <li><a href="http://twitter.com/aronwoost" target="_blank">Twitter</a></li>
+  <li><a href="https://github.com/aronwoost" target="_blank">Github</a></li>
+  <li><a href="http://stackoverflow.com/users/294619/aron-woost" target="_blank">StackOverflow</a></li>
+  <li><a href="http://linkedin.com/in/aronwoost" target="_blank">LinkedIn</a></li>
+  <li><a href="https://www.xing.com/profile/aron_woost" target="_blank">Xing</a></li>
+</ul>
