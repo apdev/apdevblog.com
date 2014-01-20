@@ -37,7 +37,6 @@ article {
     padding-top: .5em;
     margin-bottom: 1em;
     padding-bottom: 1em;
-    background: $img-border bottom left repeat-x;
     font-size: 2.0em; font-style: italic;
     line-height: 1.3em;
   }
@@ -104,7 +103,7 @@ article {
 
 #content .blog-index {
   padding: { top: 0; bottom: 0; }
-  
+
   article {
     margin-bottom: 3em;
     @media only screen and (min-width: 768px) {
