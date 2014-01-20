@@ -7,4 +7,186 @@
   }
 }
 
+// twitter
+
+.twitter-btn {
+
+  position: relative;
+  background-color: #eee;
+  background-image: -webkit-linear-gradient(#fff,#dedede);
+  background-image: linear-gradient(#fff,#dedede);
+  border: #ccc solid 1px;
+  border-radius: 3px;
+  color: #333;
+  font: normal normal normal 11px/18px 'Helvetica Neue',Arial,sans-serif;
+  font-weight: bold;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  cursor: pointer;
+  overflow: hidden;
+
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+
+  box-sizing: border-box;
+  width: 60px;
+  height: 20px;
+
+  margin-right: 6px;
+
+  -webkit-user-select: none;
+
+  &:hover {
+    border-color: #bbb;
+    background-color: #d9d9d9;
+    background-image: -webkit-linear-gradient(#f8f8f8,#d9d9d9);
+    background-image: linear-gradient(#f8f8f8,#d9d9d9);
+    box-shadow: none;
+  }
+
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    margin-top: -5px;
+    width: 16px;
+    height: 13px;
+    background: transparent url(/images/twitter.png) 0 0 no-repeat;
+    // background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAoCAYAAABq13MpAAAGcklEQ…+iQ5eYRUuv0EJCOZhAtVrtaldXl2dkZGTbC5tIuMa+L2z+BexZXK+OBaruAAAAAElFTkSuQmCC);
+  }
+
+  .label {
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    padding: 0 3px 0 19px;
+    white-space: nowrap;
+  }
+}
+
+.twitter-follow-btn {
+  vertical-align: middle;
+
+  &.aronwoost {
+    width: 130px;
+  }
+
+  &.pkyeck {
+    width: 112px;
+  }
+}
+
+
+
+// facebook
+
+.pluginShareButtonLink {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 11px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande',tahoma,verdana,arial,sans-serif;
+
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.blueButton {
+  border: none;
+}
+
+.blueButton.blue .pluginButton {
+  background: #4c69ba;
+  background: -webkit-gradient(linear, center top, center bottom, from(#4c69ba), to(#3b55a0));
+  background: -webkit-linear-gradient(#4c69ba, #3b55a0);
+  border: none;
+  -webkit-border-radius: 2px;
+  color: #fff;
+  height: 20px;
+  line-height: 20px;
+  text-shadow: 0 -1px 0 #354c8c;
+}
+
+.blueButton.blue .pluginButton:hover {
+  background: #5b7bd5;
+  background: -webkit-gradient(linear, center top, center bottom, from(#5b7bd5), to(#4864b1));
+  background: -webkit-linear-gradient(#5b7bd5, #4864b1);
+  border-bottom-color: #41599f;
+  border-left-color: #4961a8;
+  border-right-color: #4961a8;
+  border-top-color: #5874c3;
+  -webkit-box-shadow: inset 0 0 1px #607fd6;
+}
+
+.blueButton .pluginButton .pluginButtonContainer {
+  -webkit-font-smoothing: antialiased;
+}
+
+.blueButton .pluginButton .pluginButtonImage {
+  display: inline-block;
+}
+
+.pluginButton button {
+  background: transparent;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.blueButton .pluginButton button {
+  font-weight: bold;
+  outline: none;
+}
+
+.blueButton.blue .pluginButton button {
+  text-shadow: 0 -1px 0 #354c8c;
+}
+
+.sp_6lt5t8 {
+  background-image: url(/images/fb.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+}
+
+.sx_e2959e {
+  background-position: 0 -30px;
+}
+
+.blueButton .pluginButton .pluginButtonIcon {
+  height: 14px;
+  left: 0;
+  position: relative;
+  vertical-align: top;
+  width: 14px;
+}
+
+.blueButton.blue .pluginButton .pluginButtonIcon {
+  margin: 0 4px 0 4px;
+  top: 3px;
+}
+
+
+.blueButton .pluginButton .pluginButtonLabel {
+  position: relative;
+  vertical-align: top;
+}
+
+.blueButton.blue .pluginButton .pluginButtonLabel {
+  padding: 0 5px 0 0;
+}
+
+
+
 #fb-root { display: none; }

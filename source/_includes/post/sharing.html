@@ -1,11 +1,8 @@
 <div class="sharing">
   {% if site.twitter_tweet_button %}
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-via="{{ site.twitter_user }}" data-count="none" >Tweet</a>
-  {% endif %}
-  {% if site.google_plus_one %}
-  <div class="g-plusone" data-size="{{ site.google_plus_one_size }}"></div>
+  <a class="twitter-btn" href="http://www.twitter.com/share?url={{ site.url }}{{ page.url }}&text={{ page.title | url_encode }}%20@%20{{ site.title | url_encode }}%20{{ site.subtitle | url_encode }}" target="_blank"><i></i><span class="label" id="l">Tweet</span></a>
   {% endif %}
   {% if site.facebook_like %}
-    <div class="fb-share-button" data-type="button"></div>
+  <a class="pluginShareButtonLink" href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}&t={{ page.title | url_encode }}" target="_blank"><div class="blueButton blue"><div class="pluginButton"><div><div class="pluginButtonContainer"><div class="pluginButtonImage"><button type="submit"><i class="pluginButtonIcon img sp_6lt5t8 sx_e2959e"></i></button></div><span class="pluginButtonLabel">Share</span></div></div></div></div></a>
   {% endif %}
 </div>
