@@ -2,6 +2,7 @@
 layout: post
 title: "Current state of input[type=range]"
 date: 2014-01-22 21:17:28 +0100
+published: false
 author: Aron
 comments: true
 permalink: /current-state-of-input-range
