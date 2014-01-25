@@ -90,11 +90,4 @@ function loadGists() {
   }
 }
 
-var feature = {
-  querySelectorAll: !!document.querySelectorAll,
-  array5: !!Array.prototype.forEach
-};
-
-if (feature.querySelectorAll && feature.array5) {
-  loadGists();
-}
+loadGists();

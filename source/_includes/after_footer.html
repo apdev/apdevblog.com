@@ -22,6 +22,21 @@
       doc[addEvent](type, fix, true);
     }
 
+    var feature = {
+      querySelectorAll: !!document.querySelectorAll,
+      array5: !!Array.prototype.forEach
+    };
+
+    if (!feature.querySelectorAll || !feature.array5) {
+      return;
+    }
+
+    var gistElements = document.querySelectorAll('a[data-json-url]');
+
+    if(gistElements.length === 0) {
+      return;
+    }
+
     // gist stuff
     var gist = document.createElement('script');
     gist.type = 'text/javascript';
