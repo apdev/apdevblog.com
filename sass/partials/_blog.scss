@@ -1,5 +1,11 @@
 article {
   margin-bottom: 1em;
+  @media only screen and (min-width: 768px) {
+    margin-right: 1.5em;
+  }
+  @media only screen and (min-width: 992px) {
+    margin-right: 3.5em; 
+  }
 
   a {
     @extend .force-wrap;
@@ -32,8 +38,14 @@ article {
     padding-top: 0.8em;
   }
 
-  .entry-content & h2:first-child, header + h2 { padding-top: 0; }
-  h2:first-child, header + h2 { background: none; }
+  .entry-content & h2:first-child, header + h2 {
+    padding-top: 0;
+  }
+
+  h2:first-child, header + h2 {
+    background: none;
+  }
+
   .feature {
     padding-top: .5em;
     margin-bottom: 1em;
@@ -41,12 +53,20 @@ article {
     font-size: 2.0em; font-style: italic;
     line-height: 1.3em;
   }
+  
   img, video, .flash-video {
     @extend .flex-content;
     @extend .basic-alignment;
   }
-  video, .flash-video { margin: 0 auto 1.5em; }
-  video { display: block; width: 100%; }
+  
+  video, .flash-video {
+    margin: 0 auto 1.5em;
+  }
+  
+  video {
+    display: block; width: 100%;
+  }
+  
   .flash-video {
     > div {
       position: relative;
