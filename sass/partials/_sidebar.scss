@@ -1,3 +1,97 @@
-@import "sidebar/base";
-@import "sidebar/about";
-@import "sidebar/recent";
+aside.sidebar {
+  overflow: hidden;
+  float: none;
+  padding: 0 0 1px;
+  @extend .group;
+  
+  color: lighten($sidebar-color, 40%);
+  background-color: lighten($sidebar-bg, 2);
+
+  @media only screen and (min-width: 768px) {
+    width: $sidebar-width-medium - $sidebar-pad-medium*2;
+    padding: 0 $sidebar-pad-medium $sidebar-pad-medium;
+    background: none;
+    clear: none;
+    float: left;
+    margin: 0 -100% 0 0;
+  }
+
+  @media only screen and (min-width: 992px) {
+    width: $sidebar-width-wide - $sidebar-pad-wide*2;
+    padding: 0 $sidebar-pad-wide 0;
+  }
+
+  &:hover a {
+    color: $sidebar-link-color;
+    
+    &:hover {
+      color: $sidebar-link-color-hover;
+    }
+  }
+
+  a {
+    @extend .force-wrap;
+
+    color: inherit;
+    text-decoration: none;
+    @include transition(color .5s);
+  }
+
+  section {
+    @extend .sans;
+    font-size: .8em;
+    line-height: 1.4em;
+    margin-bottom: 1.5em;
+    
+    @media only screen and (min-width: 768px) {
+      width: auto;
+      margin-left: 0;
+      &.odd,
+      &.even {
+        float: none;
+        width: auto;
+        margin-left: 0;
+      }
+    }
+
+    h1 {
+      margin: 1.5em 0 0;
+      padding-bottom: 0.4em;
+      + p {
+        padding-top: .4em;
+      }
+    }
+  }
+}
+
+.aside-alt-link {
+  color: $sidebar-link-color-subdued;
+
+  &:hover {
+    color: $sidebar-link-color-subdued-hover;
+  }
+}
+
+// about
+.apdev--aside-about--links {
+  li {
+    padding-top: 0;
+  }
+}
+
+// recent
+.apdev--aside-recent {
+  ul {
+    margin-bottom: 0.5em;
+    margin-left: 0;
+  }
+  
+  li {
+    list-style: none;
+    padding: .5em 0;
+    margin: 0;
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

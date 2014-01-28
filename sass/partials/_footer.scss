@@ -1,19 +1,13 @@
 .apdev-main-footer {
   padding-top: 1em;
-  padding-bottom: 1em;
   margin: 3em 0 1em;
 
-  // position: relative;
-  // z-index: 1;
-
   @extend .sans;
-  font-size: 0.65em;
-  color: lighten($text-color, 60%);
 
-  a {
-    @include link-colors($footer-link-color, $footer-link-color-hover, $visited: $footer-link-color);
+  line-height: 1.5em;
+  font-size: 0.8em;
+  @media only screen and (min-width: 992px) {
+    padding-bottom: 1em;
   }
-  p:last-child {
-    margin-bottom: 0;
-  }
+  color: lighten($text-color, 60%);
 }
