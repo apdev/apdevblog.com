@@ -54,7 +54,8 @@ webfonts, it begins rendering the content without displaying the text. Only
 after the webfont is downloaded, does the text become visible - in my eyes
 webfonts' *biggest* disadvantage.
 
-[{% img /images/2014/01/waterfall-templates-complete.png 462 513 'waterfall for our templates' %}][11]  
+[{% img /images/2014/01/waterfall-templates-complete.png 462 513 'waterfall for our templates' %}][11]
+
 *I used my slow vServer to get this waterfall, so an optimized setup with an 
 additional CDN (like the live-server) should be even faster.*
 
@@ -103,7 +104,7 @@ can't use it because the different ad-formats won't play well with iframes =
 even more synchronous JavaScript stopping the page from being rendered :(
 
 Most of the time the first ad is located on the top of every page, so the aforementioned
-scripts have to be loaded before this (meaning in the `<head>`). Not 1, not 2, 
+scripts have to be loaded before this (in the `<head>`). Not 1, not 2, 
 but 4 (in words: FOUR) scripts are loaded before the custom initialisation is 
 run and the first ad can be displayed on page ... ah no, I forgot to mention 
 that every ad loads one or more JS files to get the content they
@@ -113,8 +114,9 @@ All these tracking and ad scripts push the "start render" back 4.5 seconds which
 leads to readers looking at a blank screen for 8 seconds. If you're
 lucky, they haven't left the site when the content starts trickling in.  
 I'd also like to point to the fact that the webfonts are loaded long after the
-"start render" at around 13 seconds, thus the reader keeps looking at empty
-containers rendered on screen. 
+"start render" at around 13 seconds which means that even though the browser 
+starts to render the page, [copy isn't displayed][14] until they are downloaded 
+completely.
 
 Let's take a look at how this changes the page's waterfall:
 
@@ -160,3 +162,4 @@ party widgets/scripts improve. At least I hope so.
   [11]: /images/2014/01/waterfall-templates-complete.png
   [12]: /images/2014/01/waterfall-live-time-to-render.png
   [13]: /images/2014/01/waterfall-live-complete.png
+  [14]: https://twitter.com/jaffathecake/status/425629232543186944
