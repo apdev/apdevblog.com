@@ -3,7 +3,6 @@ layout: post
 title: "weekly digest #2"
 date: 2014-02-03 11:00:00 +0100
 comments: true
-published: false
 categories: digest
 ---
 Second week of our link collection - some old, some new. But each one worth your time.
