@@ -24,7 +24,7 @@ replace some often used jQuery built-in functions. [Zack Bloom][3] and
 
 > If you're developing a library on the other hand, please take a moment to consider if you actually need jQuery as a dependency. Maybe you can include a few lines of utility code, and forgo the requirement.
 
-I totally agree with this statement. You should think twice before using 
+I totally agree with this statement. You should pause and ponder before using 
 something like jQuery (or e.g. Modernizr), be it in a library or any other project you are doing. It comes with a cost that you definitely should be aware of.
 
 [Tim Kadlec][5] also wrote a [post][6] and sums up the performance hits pretty well:
