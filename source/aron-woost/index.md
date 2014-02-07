@@ -10,10 +10,15 @@ sharing: false
 <p>Contact Aron: aron at apdevblog dot com</p>
 
 Elsewhere in the interwebs
-<ul>
-  <li><a href="http://twitter.com/aronwoost" target="_blank">Twitter</a></li>
-  <li><a href="https://github.com/aronwoost" target="_blank">Github</a></li>
-  <li><a href="http://stackoverflow.com/users/294619/aron-woost" target="_blank">StackOverflow</a></li>
-  <li><a href="http://linkedin.com/in/aronwoost" target="_blank">LinkedIn</a></li>
-  <li><a href="https://www.xing.com/profile/aron_woost" target="_blank">Xing</a></li>
-</ul>
+
+- [Twitter][1]
+- [Github][2]
+- [StackOverflow][3]
+- [LinkedIn][4]
+- [Xing][5]
+
+ [1]: http://twitter.com/aronwoost
+ [2]: https://github.com/aronwoost
+ [3]: http://stackoverflow.com/users/294619/aron-woost
+ [4]: http://linkedin.com/in/aronwoost
+ [5]: https://www.xing.com/profile/aron_woost
