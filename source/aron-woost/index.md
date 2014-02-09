@@ -16,9 +16,11 @@ Elsewhere in the interwebs
 - [StackOverflow][3]
 - [LinkedIn][4]
 - [Xing][5]
+- [Codepen][6]
 
  [1]: http://twitter.com/aronwoost
  [2]: https://github.com/aronwoost
  [3]: http://stackoverflow.com/users/294619/aron-woost
  [4]: http://linkedin.com/in/aronwoost
  [5]: https://www.xing.com/profile/aron_woost
+ [6]: http://codepen.io/aronwoost/
