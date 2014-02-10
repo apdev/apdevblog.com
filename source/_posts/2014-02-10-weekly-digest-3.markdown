@@ -5,6 +5,8 @@ date: 2014-02-10 11:00:00 +0100
 comments: true
 categories: digest
 ---
+This week's digest is about optimization - how to get more out of mobile performance, Responsive Web Design, your tools, your daily working hours and JS in general. Have reading.
+
 - [Responsive Web Design Performance](http://programming.oreilly.com/2014/02/responsive-web-design-performance.html)  
 Etsy's Lara Swanson talks "mobile first" (Design + Performance)
 - [Performance for Responsive Web Design](http://oreillynet.com/pub/e/2999)  
