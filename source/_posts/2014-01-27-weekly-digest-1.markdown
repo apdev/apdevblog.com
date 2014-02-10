@@ -8,7 +8,7 @@ categories: digest
 Today we are starting a new type of post: a weekly digest of articles, videos
 or just links we stumbled upon during the last week. They don't have to be
 brand-new, hyped or hot on Hacker News to get onto our list (link #1 is from 2012)
-... instead being great, entertaining or just full of good stuff helps a lot :)
+... instead being great, entertaining or just full of good stuff helps a lot :)<!-- more -->
 
 Maybe we got something you haven't read/watched before:
 

@@ -6,7 +6,7 @@ comments: true
 categories: digest
 ---
 Second week of our link collection - some old, some new. But each one worth your time.
-Of course. Happy reading.
+Of course. Happy reading.<!-- more -->
 
 - [DevSwag](http://devswag.com/collections/stickers)  
 Get stickers from open source projects. Support and promote them.
