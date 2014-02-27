@@ -12,3 +12,5 @@ Finally some stats regarding that issue.
 The guys from the JavaScript Jabber podcast talk to [Eric Schoffstall](https://twitter.com/eschoff), one of the creators behind [gulp.js](http://gulpjs.com/). Really interesting background info why they created a new build-system (instead of just using grunt).
 - [Stephen Wolfram's Introduction to the Wolfram Language](https://www.youtube.com/watch?v=_P9HqHVPeik)  
 Well, we should have a look at it, right?
+- [ATOM](http://atom.io/)  
+New "hackable" text editor from the people we love @ Github. Can't wait to get our hands on this one.
