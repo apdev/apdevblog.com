@@ -6,6 +6,9 @@ comments: true
 published: false
 categories: digest
 ---
+This issue of our weekly digest has a bit of everything: performance, tools,
+security - audio, video, text ... Happy reading, watching, listening.<!-- more -->
+
 - [Cookieless Domain vs. DNS lookups](http://www.jonathanklein.net/2014/02/revisiting-cookieless-domain.html)  
 Finally some stats regarding that issue.
 - [Gulp vs. Grunt](http://javascriptjabber.com/097-jsj-gulp-js-with-eric-schoffstall/)  
@@ -14,3 +17,5 @@ The guys from the JavaScript Jabber podcast talk to [Eric Schoffstall](https://t
 Well, we should have a look at it, right?
 - [ATOM](http://atom.io/)  
 New "hackable" text editor from the people we love @ Github. Can't wait to get our hands on this one.
+- [Salted Password Hashing - Doing it Right](https://crackstation.net/hashing-security.htm)  
+Some more input on securely saving passwords - as an addition to the article from last week: [salt'n'pepper - or how to store passwords securely](http://apdevblog.com/salt-n-pepper-or-how-to-store-passwords-securely/)
