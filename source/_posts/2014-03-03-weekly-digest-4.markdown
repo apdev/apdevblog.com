@@ -19,3 +19,5 @@ Well, we should have a look at it, right?
 New "hackable" text editor from the people we love @ Github. Can't wait to get our hands on this one.
 - [Salted Password Hashing - Doing it Right](https://crackstation.net/hashing-security.htm)  
 Some more input on securely saving passwords - as an addition to the article from last week: [salt'n'pepper - or how to store passwords securely](http://apdevblog.com/salt-n-pepper-or-how-to-store-passwords-securely/)
+
+Fun fact: You can check who added what link by [checking the commits](https://github.com/apdev/apdevblog.com/commits/master).
