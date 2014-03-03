@@ -3,7 +3,6 @@ layout: post
 title: "weekly digest #4"
 date: 2014-03-03 11:00:00 +0100
 comments: true
-published: false
 categories: digest
 ---
 This issue of our weekly digest has a bit of everything: performance, tools,
