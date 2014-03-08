@@ -8,3 +8,5 @@ categories: digest
 ---
 - [Code Guide by @mdo](http://mdo.github.io/code-guide/)  
 We are also planning to create Code Conventions apdev edition
+- [What is a Heisenbug](http://en.wikipedia.org/wiki/Heisenbug)  
+Conquer the Heisenbug, one of the most satisfying things in programming.
