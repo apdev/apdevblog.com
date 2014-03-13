@@ -10,3 +10,5 @@ categories: digest
 We are also planning to create Code Conventions apdev edition
 - [What is a Heisenbug](http://en.wikipedia.org/wiki/Heisenbug)  
 Conquer the Heisenbug, one of the most satisfying things in programming.
+- [How much damage does third party content really do to e-commerce sites?](http://blog.intechnica.co.uk/2014/03/07/how-much-damage-does-third-party-content-really-do-to-ecommerce-sites-report/)  
+Some additional info to our [own post about 3rd party content](http://apdevblog.com/mobile-performance-and-how-it-suffers-from-3rd-party-content/)
