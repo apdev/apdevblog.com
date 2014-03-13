@@ -86,9 +86,13 @@ module Jekyll
       gist_url = get_gist_url_for(gist, file)
       data     = get_web_content(gist_url)
 
-      if data.code.to_i == 302
+      locations = Array.new
+      while (data.code.to_i == 301 || data.code.to_i == 302)
         data = handle_gist_redirecting(data)
+        break if locations.include? data.header['Location']
+        locations << data.header['Location']
       end
+
 
       if data.code.to_i != 200
         raise RuntimeError, "Gist replied with #{data.code} for #{gist_url}"
