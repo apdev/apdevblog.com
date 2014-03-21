@@ -4,7 +4,6 @@ title: "gruntjs and its plugins"
 date: 2014-03-21 11:00:00 +0100
 author: phil
 comments: true
-published: false
 categories: 
   - web development
 tags:
@@ -13,7 +12,8 @@ tags:
   - gruntjs
   - gulpjs
 ---
-... or better: "plugin mess".
+... or even more suitable: "plugin mess". But I'll start the story at the
+beginning.
 
 I wanted to take look at [Grunt][1] for a while now. Finally, a couple of weeks
 ago, I ran into a problem that I couldn't overcome with [NPM][2] and its `scripts`
@@ -52,10 +52,10 @@ Write small modules that run in all kind of environments and solve exactly one
 problem. This way, others can use your code - even in scenarios which you
 haven't been thinking about while writing the code ... this is a good thing.
 
-Funny enough, a couple of days after my first Grunt experience, I listened to
+Funny enough, a couple of days after my first stint with Grunt, I listened to
 the [JavaScript Jabber podcast][3] and they were talking about [Gulp][4] (and
 Grunt, of course) with [Eric Schoffstall][7] - one of the developers behind "the
-new kid on the block".
+streaming build system".
 It was really interesting and you should definitely go and listen to it (after
 you've finished reading the post).
 
@@ -63,15 +63,21 @@ I don't want to talk about performance or other important reasons why A is
 better than B, but there are two things - in my eyes - Gulp (or the Gulp
 community) does better than Grunt:
 
-> So, we’re curating it. We don’t just come out and say, “Oh this plugin sucks. We think it’s stupid. You’re not allowed on our website.” But we do say, “This plugin doesn’t work,” or, “It has too many bugs. It just shouldn’t be a plugin. And those are our requirements.”
+1) There is a curated [plugin list][5]
 
-- there is a curated [plugin list][5]  
+{% blockquote Eric Schoffstall, episode 97 of The JavaScript Jabber %}
+So, we’re curating it. We don’t just come out and say, “Oh this plugin sucks. We think it’s stupid. You’re not allowed on our website.” But we do say, “This plugin doesn’t work,” or, “It has too many bugs. It just shouldn’t be a plugin. And those are our requirements.”
+{% endblockquote %}
+
 So there shouldn't be duplicate plugins or plugins that wrap some functionality
 you could use directly via its node module
 
->  [...] we actually have a section of docs called recipes. And these are just, “Hey, I used Mocha with Gulp. Here is a task that I used it in and let me explain why I did a couple of things.” So that way, people can just say, “Okay, I want to use Mocha. Let me go look at the recipes and go find one for Mocha.” And it’ll explain in-depth why they did what they did, how to use it [...]
+2) [Recipes][6] instead of too many plugins
 
-- [recipes][6] instead of too many plugins  
+{% blockquote Eric Schoffstall, episode 97 of The JavaScript Jabber %}
+[...] we actually have a section of docs called recipes. And these are just, “Hey, I used Mocha with Gulp. Here is a task that I used it in and let me explain why I did a couple of things.” So that way, people can just say, “Okay, I want to use Mocha. Let me go look at the recipes and go find one for Mocha.” And it’ll explain in-depth why they did what they did, how to use it [...]
+{% endblockquote %}
+
 If there is a problem you solved by using already available node modules, share
 it with other devs that might get stuck at the same point. But don't do it
 writing your own plugin - write a small HOWTO instead.
