@@ -46,7 +46,7 @@ this, I could reuse code that others had written - maybe not for this use-case
 but as a standalone module that was so granular that it "only" solved _one_
 problem but that perfectly.
 
-**Don' write plugins that try to solve too many problems at once.**
+**Don't write plugins that try to solve too many problems at once.**
 
 Write small modules that run in all kind of environments and solve exactly one
 problem. This way, others can use your code - even in scenarios which you
