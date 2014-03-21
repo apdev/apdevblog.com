@@ -13,8 +13,7 @@ tags:
   - gruntjs
   - gulpjs
 ---
-... or even more suitable: "plugin mess". But I'll start the story at the
-beginning.
+... or even more suitable: "plugin mess". But I'll start at the beginning.
 
 I wanted to take look at [Grunt][1] for a while now. Finally, a couple of weeks
 ago, I ran into a problem that I couldn't overcome with [NPM][2] and its `scripts`
