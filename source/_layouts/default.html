@@ -4,7 +4,7 @@
 {% capture category %}{% if post %}{{ post.categories | size }}{% else %}{{ page.categories | size }}{% endif %}{% endcapture %}
 
 <body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} 
-  class="{% if page.sidebar == false %}no-sidebar{% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %}collapse-sidebar sidebar-footer{% endif %} {% unless category == '0' %}{% if post %}{{ post.categories }}{% else %}{{ page.categories }}{% endif %}{% endunless %}">
+  class="{% if page.sidebar == false %}no-sidebar{% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %}collapse-sidebar sidebar-footer{% endif %} {% unless category == '0' %}{% if post %}{{ post.categories | join: ' ' }}{% else %}{{ page.categories | join: ' ' }}{% endif %}{% endunless %}">
   
   <div class="apdev-page">
     <header role="banner" class="apdev--main-header">{% include header.html %}</header>
