@@ -6,6 +6,7 @@ author: phil
 comments: true
 categories: 
   - web development
+  - post
 tags:
   - JavaScript
   - task runner

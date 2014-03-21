@@ -9,6 +9,7 @@ categories:
   - performance
   - mobile
   - web development
+  - post
 tags:
   - JavaScript
   - browser

@@ -7,6 +7,7 @@ comments: true
 categories: 
   - performance
   - web development
+  - post
 tags:
   - JavaScript
   - performance

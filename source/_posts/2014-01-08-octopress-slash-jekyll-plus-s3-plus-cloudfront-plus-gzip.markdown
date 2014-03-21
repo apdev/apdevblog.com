@@ -8,6 +8,7 @@ permalink: /octopress-jekyll-s3-cloudfront-gzip
 categories:
   - Octopress
   - hosting
+  - post
 tags:
   - Octopress
   - CDN

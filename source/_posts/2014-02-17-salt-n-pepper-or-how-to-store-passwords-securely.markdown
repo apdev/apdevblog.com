@@ -7,6 +7,7 @@ comments: true
 categories: 
   - web development
   - security
+  - post
 ---
 Just yesterday I received an email from [kickstarter][1] telling me that their database
 servers were hacked and that someone was able to access all my account data: 
