@@ -14,7 +14,7 @@
   <ul id="recent_digests">
     {% for post in site.categories.digest limit: 5 %}
       <li class="post">
-        <a href="{{ root_url }}{{ post.url }}">{{ post.title | replace:'weekly digest','week'}}</a>
+        <a href="{{ root_url }}{{ post.url }}">{{ post.title | replace: 'weekly digest #', 'Issue N&deg;' | replace: 'read later #', 'Issue N&deg;' }}</a>
       </li>
     {% endfor %}
   </ul>
