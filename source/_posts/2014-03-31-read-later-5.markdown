@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "read later #5"
-date: 2014-04-07 11:00:00 +0100
+date: 2014-03-31 22:00:00 +0100
 comments: true
-published: false
 categories: digest
 ---
 Our "weekly digest" is now "read later" - because it wasn't really weekly and
