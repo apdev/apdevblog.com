@@ -8,3 +8,9 @@ categories: digest
 ---
 - [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet)  
 While top 5 Ejmojis on GitHub are most important. :smile:
+
+- [RegExr v2.0](http://www.regexr.com/)  
+Very nice rework by Grant Skinner and his team.
+
+- [node core vs userland](https://github.com/joyent/node/wiki/node-core-vs-userland)  
+IMO the most important node paradigm. Only things that are very hard to implement for a module or almost everyone needs belong to node core. Everything else is userland.
