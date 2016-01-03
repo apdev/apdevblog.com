@@ -1,0 +1,17 @@
+---
+layout: post
+title: "read later #7"
+date: 2016-01-03 11:00:00 +0000
+comments: true
+categories: digest
+---
+Welcome back!
+
+- [What Is Functional Programming?](http://blog.jenkster.com/2015/12/what-is-functional-programming.html)  
+Must read.
+
+- [Which Programming Languages Are Functional?](http://blog.jenkster.com/2015/12/which-programming-languages-are-functional.html)  
+Must read (continued).
+
+- [the changelog #187](https://changelog.com/187/)  
+With Dan Abramov, creator of redux.
