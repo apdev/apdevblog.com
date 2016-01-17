@@ -7,6 +7,8 @@ sharing: false
 
 <p>Since 2009 he does product development in HTML(5), CSS and JavaScript, where JavaScript is his focus.</p>
 
+<p>Aron is CTO at <a href="https://mixedzone.io/">MixedZone</a>.</p>
+
 <p>Contact Aron: aron at apdevblog dot com</p>
 
 Elsewhere in the interwebs
