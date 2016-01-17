@@ -16,4 +16,4 @@ echo "syncing rest"
 aws s3 sync public/. s3://$1/ --size-only --acl "public-read" --cache-control "public,max-age=43200" --exclude '*.html' --exclude '*.js' --exclude '*.css' --exclude '*.jpg' --exclude '*.png' --exclude '*.gif'
 echo "syncing rest complete"
 
-aws cloudfront create-invalidation --distribution-id EGOQYHI9D5FFP --paths /.
+aws cloudfront create-invalidation --distribution-id EGOQYHI9D5FFP --paths /. /index.html /atom.xml /sitemap.xml
