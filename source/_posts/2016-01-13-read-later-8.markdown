@@ -9,7 +9,7 @@ categories: digest
 It's challenging the keep the commit history clean when the team grows. This is one solution, Aron uses it at [MixedZone](https://mixedzone.io/) and is very happy with it.
 
 - [How to Rebase a Pull Request](https://github.com/edx/edx-platform/wiki/How-to-Rebase-a-Pull-Request)  
-Learn how to rebase (and how to [squash](https://github.com/edx/edx-platform/wiki/How-to-Rebase-a-Pull-Request#squash-your-changes)) commit commits when following the workflow described above.
+Learn how to rebase (and how to [squash](https://github.com/edx/edx-platform/wiki/How-to-Rebase-a-Pull-Request#squash-your-changes)) commits when following the workflow described above.
 
 - Modern JavaScript:  
 ![](https://pbs.twimg.com/media/CWeYEUvWoAA5Z3V.png)
