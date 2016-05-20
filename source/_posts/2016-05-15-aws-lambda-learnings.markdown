@@ -1,9 +1,13 @@
 ---
 layout: post
 title: "Building a node web app at scale with AWS Lambda"
-date: 2016-05-15 11:00:00 +0000
+date: 2016-05-20 11:00:00 +0000
 comments: true
-categories: digest
+author: Aron
+categories:
+  - web development
+  - serverless
+  - AWS
 ---
 
 Recently I built a web app for the [Eurovision Song Contest](http://www.eurovision.tv). Here are the things I would like to have known 6 week ago.
