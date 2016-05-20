@@ -12,7 +12,7 @@ It's challenging the keep the commit history clean when the team grows. This is 
 Learn how to rebase (and how to [squash](https://github.com/edx/edx-platform/wiki/How-to-Rebase-a-Pull-Request#squash-your-changes)) commits when following the workflow described above.
 
 - Modern JavaScript:  
-![](https://pbs.twimg.com/media/CWeYEUvWoAA5Z3V.png)
+![modern-javascript-annotated](/images/2016/modern-javascript-annotated.png)
 
 - [Flexbox Froggy](http://flexboxfroggy.com/)  
 Learn Flexbox. The fun way.
