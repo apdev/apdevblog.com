@@ -6,9 +6,9 @@ comments: true
 categories: digest
 ---
 
-Recently I build a web app for the [Eurovision Song Contest](http://www.eurovision.tv). Here the things I would like to have known 6 week ago.
+Recently I built a web app for the [Eurovision Song Contest](http://www.eurovision.tv). Here are the things I would like to have known 6 week ago.
 
-Some days into the project [Node 4.3 support was added](https://aws.amazon.com/de/about-aws/whats-new/2016/04/aws-lambda-supports-node-js-4-3/). Previously the only supported Node version was 0.10 and the lack of generators made the code super messy. Without Node 4.3 this blogpost probably would look kinda different.
+Some days into the project [Lambda added Node 4.3 support](https://aws.amazon.com/de/about-aws/whats-new/2016/04/aws-lambda-supports-node-js-4-3/). Previously the only supported Node version was 0.10 and the lack of generators made the code super messy. Without Node 4.3 this blogpost probably would look kinda different.
 
 ## Lambda is not a web server!
 
@@ -19,13 +19,13 @@ exports.handler = function(event, context, callback) {
 }
 ```
 
-Lambda function can be triggered from different sources ([S3](http://docs.aws.amazon.com/lambda/latest/dg/with-s3.html), [DynamoDB](http://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html), [Scheduled Events](http://docs.aws.amazon.com/lambda/latest/dg/with-scheduled-events.html) and more). For processing HTTP requests another service is needed: [API Gateway](https://aws.amazon.com/de/api-gateway/).
+Lambda functions can be triggered from different sources ([S3](http://docs.aws.amazon.com/lambda/latest/dg/with-s3.html), [DynamoDB](http://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html), [Scheduled Events](http://docs.aws.amazon.com/lambda/latest/dg/with-scheduled-events.html) and more). For processing HTTP requests another service is needed: [API Gateway](https://aws.amazon.com/de/api-gateway/).
 
-API Gateway is not tied to Lambda can be used for various kinds of backends. Buttom line: The API Gateway/Lambda stack has very little to do with something like Express. On the contrary, mastering API Gateway is hard and I underestimated that. As a matter of fact most debugging and cursing happend on API Gateway side and not because of Lambda.
+API Gateway is not tied to Lambda and can be used for various kinds of backends. Bottom line: The API Gateway/Lambda stack has very little to do with something like Express. On the contrary, mastering API Gateway is hard and I underestimated that. As a matter of fact, most debugging and cursing happened on API Gateway side and not because of Lambda.
 
 ## How to get requests into Lambda
 
-API Gateway provides a graphical interface where you (basically) setup endpoint and method and map it to a Lambda function.
+API Gateway provides a graphical interface where you (basically) setup an endpoint and method and map it to a Lambda function.
 
 ![api-gateway-method-endpoint](/images/2016/api-gateway-method-endpoint.png)
 
@@ -33,7 +33,7 @@ By default API Gateway only passes the request payload (in case of a `POST`/`PUT
 
 ### Input mapping
 
-In order to get all the request meta data into Lambda (like path, method, ip, headers etc.) a input "Body Mapping Templates" must be setuped. This is the mapping I used:
+In order to get all the request meta data into Lambda (like path, method, ip, headers etc.) an input "Body Mapping Templates" must be set up. This is the mapping I used:
 
 ```js
 {
@@ -59,11 +59,11 @@ In order to get all the request meta data into Lambda (like path, method, ip, he
 }
 ```
 
-This values are then available in the `event` parameter of the Lambda handler function.
+These values are then available in the `event` parameter of the Lambda handler function.
 
 ## How to get responses out of Lambda
 
-For success response it's quite easy. From Lambda do:
+For a success response it's quite easy. From Lambda do:
 
 ```js
 exports.handler = function(event, context, callback) {
@@ -74,9 +74,9 @@ exports.handler = function(event, context, callback) {
 }
 ```
 
-`response` is what your user will receive as response payload.
+`response` is what your user will receive as the response payload.
 
-### How to setup non-default (200) reponses
+### How to setup non-default (200) responses
 
 Probably the most annoying thing with API Gateway (and the thing that produces the most Lambda related issue in the API Gateway forums) is how to setup custom HTTP response codes. It works by regex'ing over the error reponse from Lambda.
 
@@ -92,7 +92,7 @@ exports.handler = function(event, context, callback) {
 
 Since the first parameter of the callback function is used, API Gateway understands it as an error. In API Gateway you setup a "Lambda Error Regex" with regex `.*404.*` and the user will receive status code 404.
 
-So how to not only set the correct status code but also pass a response to the client? You can pass the status code and response body as sparate properties:
+So how to not only set the correct status code but also pass a response to the client? You can pass the status code and response body as separate properties:
 
 ```js
 exports.handler = function(event, context, callback) {
@@ -132,9 +132,9 @@ That means that you can currently only have one response code (the one that you 
 
 ## Get used to swagger config file early
 
-While the graphical user interface of API Gateway is fine at the beginning when starting to work with and understanding API Gateway it gets super annoying down the road, because you ending up copy-pasting stuff all the time. For instance you will likely want to have the same "Lambda Error Regex" for most of your endpoints. And you definettly need to have the input "Body Mapping Templates" from above on every endpoint.
+While the graphical user interface of API Gateway is fine at the beginning when starting to work with and understanding API Gateway, it gets super annoying down the road because you are ending up copy-pasting stuff all the time. For instance you will likely want to have the same "Lambda Error Regex" for most of your endpoints. And you definitely need to have the input "Body Mapping Templates" from above on every endpoint.
 
-I resisted way to long agains using a swagger config file, since I was unfamiliar with it and thought I already need to learn enough new stuff. However, it's easy to understand since it provides the same settings as the graphical user interface. I suggest you set a your basic setting with the GUI and then export it via "Stages" -> "Your stage name" -> "Export" -> "Export as Swagger + API Gateway Extensions".
+I resisted way too long against using a swagger config file, since I was unfamiliar with it and thought I already need to learn enough new stuff. However, it's easy to understand since it provides the same settings as the graphical user interface. I suggest you set up your basic settings with the GUI and then export it via "Stages" -> "Your stage name" -> "Export" -> "Export as Swagger + API Gateway Extensions".
 
 Then you can edit the swagger config file locally and push it with:
 
@@ -146,7 +146,7 @@ aws apigateway put-rest-api --rest-api-id <your_api_id> --mode overwrite --body 
 
 Most parts of the site were dynamic (the admin interface and the API), but there were also static ones (the homepage). API Gateway can be used to serve static content by using the "AWS Service Proxy" Integration type. With that static files can be proxied from S3.
 
-But it's slow! And requests count agains the API Gateway throttling limits. Instead you should use subdomains for requests that should be handled by API Gateway Lambda (i.e. api.your_domain.com and admin.your_domain.com) and map the homepage (your_domain.com) to CloudFront. This is specially true since API Gateway *can not* server binary files (i.e. images).
+But it's slow! And requests count against the API Gateway throttling limits. Instead you should use subdomains for requests that should be handled by API Gateway Lambda (i.e. api.your_domain.com and admin.your_domain.com) and map the homepage (your_domain.com) to CloudFront. This is specially true since API Gateway *can not* server binary files (i.e. images).
 
 Note: I did not test the API Gateway cache.
 
@@ -156,13 +156,13 @@ I didn't do it. Being able to run the tests locally was enough for me. Final tes
 
 ## What to use for deployment?
 
-I went with [node-lambda](https://github.com/motdotla/node-lambda). I haven't really test the alternatives. node-lambda does what I needed (deploy the function). Their ENV variables handling is nice.
+I went with [node-lambda](https://github.com/motdotla/node-lambda). I haven't really tested the alternatives. node-lambda does what I needed (deploy the function). Their ENV variables handling is nice.
 
 ## At scale
 
 If you're expecting a lot of traffic you might want to contact AWS support to increase API Gateway and Lambda limits.
 
-Lambda is smart in reusing the spawed Lambda nodes. So if your Lambda function executes relatively fast (~300ms, typical for API requests) and the traffic is moderate the default Lambda limit (100 concurent Lambdas) should be fine.
+Lambda is smart in reusing the spawned Lambda nodes. So if your Lambda function executes relatively fast (~300ms, typical for API requests) and the traffic is moderate the default Lambda limit (100 concurent Lambdas) should be fine.
 
 ## No gzip
 
@@ -170,8 +170,8 @@ Lambda is smart in reusing the spawed Lambda nodes. So if your Lambda function e
 
 ## Conclusion
 
-While Lambda is easy to get used to, having to proxy request through API Gateway make everything hard are which is super-easy in plain node (with the help of [express](http://expressjs.com/de) or friends). Now that I went through all the pain everything seams obvious. But it was a hard process.
+While Lambda is easy to get used to, having to proxy requests through API Gateway makes everything hard that is usually super-easy in plain node (with the help of [express](http://expressjs.com/de) or friends). Now that I went through all the pain, everything seems obvious. But it was a hard process.
 
-Still, serverless is the new cool kid on the block and I enjoyed not needing to deal with privisioning servers (and make them scale). AWS is the leader and they actively improving Lambda and API Gateway.
+Still, serverless is the new cool kid on the block and I enjoyed not needing to deal with provisioning servers (and make them scale). AWS is the leader and they are actively improving Lambda and API Gateway.
 
 I'm also very exited about zeit.co. With them you can just deploy your express app. Need to look into that soon.
