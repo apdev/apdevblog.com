@@ -178,4 +178,4 @@ While Lambda is easy to get used to, having to proxy requests through API Gatewa
 
 Still, serverless is the new cool kid on the block and I enjoyed not needing to deal with provisioning servers (and make them scale). AWS is the leader and they are actively improving Lambda and API Gateway.
 
-I'm also very exited about zeit.co. With them you can just deploy your express app. Need to look into that soon.
+I'm also very excited about [zeit.co](https://zeit.co/). With them you can just deploy your express app. Need to look into that soon.
