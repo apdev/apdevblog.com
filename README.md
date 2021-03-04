@@ -1,4 +1,17 @@
 # apdevblog.com
+
+## Local dev using docker
+
+```
+# build octo image first
+docker build -t octo .
+
+# run bash inside container to use rake commands (see below)
+docker run -it --rm -v $(pwd):/octopress -p 4000:4000 octo /bin/bash
+```
+
+## Rake commands for octopress
+
 ```
 rake generate   # Generates posts and pages into the public directory
 rake watch      # Watches source/ and sass/ for changes and regenerates
