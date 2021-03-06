@@ -16,6 +16,6 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /octopress
 
 COPY Gemfile Gemfile.lock /octopress/
-RUN gem install bundler -v '~> 1.5.0' && bundle install && rake generate
+RUN gem install bundler -v '~> 1.5.0' && bundle install
 
 EXPOSE 4000
